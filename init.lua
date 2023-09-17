@@ -72,6 +72,7 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
+
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -116,7 +117,7 @@ require('lazy').setup({
     'nvim-lualine/lualine.nvim',
     opts = {
       options = {
-        icons_enabled = true,
+        icons_enabled = false,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -200,7 +201,7 @@ vim.o.hlsearch = false
 
 -- Make line numbers
 vim.wo.number = true
-vim.wo.relativenumber = true
+vim.wo.relativenumber = false
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
