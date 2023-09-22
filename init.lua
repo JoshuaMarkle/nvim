@@ -21,6 +21,14 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
+  -- Terminal
+  'akinsho/toggleterm.nvim',
+  {
+    -- Tmux integration
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -56,6 +64,13 @@ require('lazy').setup({
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
     },
+  },
+
+  {
+    -- Auto pair () [] {}
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {}
   },
 
   -- Useful plugin to show you pending keybinds.
@@ -146,10 +161,12 @@ require('lazy').setup({
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
-        require'alpha'.setup(require'alpha.themes.startify'.config)
+        require'alpha'.setup(require'alpha.themes.theta'.config)
     end
   },
 }, {})
+
+require("toggleterm").setup{}
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
