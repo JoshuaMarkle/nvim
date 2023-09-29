@@ -21,19 +21,19 @@ require('lazy').setup({
   { 'tpope/vim-fugitive', enabled = false },
   { 'tpope/vim-rhubarb', enabled = false},
 
-  -- Terminal
-  'akinsho/toggleterm.nvim',
   {
     -- Tmux integration
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
- 
+
   -- Code Runner
   { "CRAG666/code_runner.nvim", config = true },
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
+
+  'ellisonleao/glow.nvim',
 
   -- Vim game to learn bindings
   { 'ThePrimeagen/vim-be-good', lazy = true },
@@ -41,7 +41,7 @@ require('lazy').setup({
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
-    enabled = false;
+    enabled = true,
     dependencies = {
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
@@ -57,7 +57,7 @@ require('lazy').setup({
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
-    enabled = false,
+    enabled = true,
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
       'L3MON4D3/LuaSnip',
@@ -173,9 +173,18 @@ require('lazy').setup({
         require'alpha'.setup(require'alpha.themes.theta'.config)
     end
   },
-}, {})
 
-require("toggleterm").setup{}
+  -- Enable LaTex support
+  'lervag/vimtex',
+
+  {
+    "NvChad/nvterm",
+    config = function ()
+      require("nvterm").setup()
+    end,
+  },
+
+}, {})
 
 -- [[ Basic Keymaps ]]
 
@@ -410,13 +419,12 @@ end
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
-local cpmActive = pcall(require, cmp)
+local cmpActive = pcall(require, 'cmp')
 if cmpActive then
   local cmp = require 'cmp'
   local luasnip = require 'luasnip'
   require('luasnip.loaders.from_vscode').lazy_load()
   luasnip.config.setup {}
-
   cmp.setup {
     snippet = {
       expand = function(args)
@@ -453,9 +461,22 @@ if cmpActive then
       end, { 'i', 's' }),
     },
     sources = {
-      { name = 'nvim_lsp' },
-      { name = 'luasnip' },
+       { name = 'nvim_lsp' },
+       { name = 'luasnip' },
     },
   }
 end
 
+--[[Configure LaTeX]]
+vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_view_general_viewer = 'zathura'
+vim.g.tex_flavour = 'latex'
+--let g:vimtex_view_general_options = '-f'  " Forward search
+--let g:vimtex_view_general_options_latexmk = '-pv'
+
+--[[Setups]]
+require('glow').setup()
+--require('ultisnips').setup{}
+
+--[[Plugins]]
+require("plugins.luasnip")
