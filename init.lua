@@ -36,12 +36,12 @@ require('lazy').setup({
   'ellisonleao/glow.nvim',
 
   -- Vim game to learn bindings
-  { 'ThePrimeagen/vim-be-good', lazy = true },
+  'ThePrimeagen/vim-be-good',
 
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
-    enabled = true,
+    enabled = false,
     dependencies = {
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
@@ -57,7 +57,7 @@ require('lazy').setup({
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
-    enabled = true,
+    enabled = false,
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
       'L3MON4D3/LuaSnip',
@@ -118,7 +118,7 @@ require('lazy').setup({
 
   {
     -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'JoshuaMarkle/playful.nvim',
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'onedark'
@@ -138,7 +138,10 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  --{ 'numToStr/Comment.nvim', opts = {} },
+
+  -- File Explorer
+  'nvim-tree/nvim-tree.lua',
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -176,6 +179,8 @@ require('lazy').setup({
 
   -- Enable LaTex support
   'lervag/vimtex',
+  'sirver/ultisnips',
+  --'honza/vim-snippets',
 
   {
     "NvChad/nvterm",
@@ -183,6 +188,24 @@ require('lazy').setup({
       require("nvterm").setup()
     end,
   },
+
+  -- Flutter Support
+  {
+      'akinsho/flutter-tools.nvim',
+      lazy = false,
+      dependencies = {
+          'nvim-lua/plenary.nvim',
+          'stevearc/dressing.nvim', -- optional for vim.ui.select
+      },
+      config = true,
+  },
+ 
+  -- Flutter LSP
+  'natebosch/vim-lsc',
+  'natebosch/vim-lsc-dart',
+
+  -- Colorize Hex Codes
+  'norcalli/nvim-colorizer.lua'
 
 }, {})
 
@@ -471,12 +494,17 @@ end
 vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_view_general_viewer = 'zathura'
 vim.g.tex_flavour = 'latex'
---let g:vimtex_view_general_options = '-f'  " Forward search
---let g:vimtex_view_general_options_latexmk = '-pv'
+--vim.g.UltiSnipsSnippetDirectories = '~/.vim/UltiSnips'
+vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
+vim.g['UltiSnipsSnippetDirectories'] = {'~/.config/nvim/ultisnips'}
+vim.g.UltiSnipsExpandTrigger = '<tab>'
+vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 --[[Setups]]
 require('glow').setup()
 --require('ultisnips').setup{}
 
 --[[Plugins]]
-require("plugins.luasnip")
+require("flutter-tools").setup()
+require'colorizer'.setup()
