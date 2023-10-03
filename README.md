@@ -4,8 +4,8 @@ Just a bunch of experimenting :)
 
 Trying to learn the nvim ropes and make a config that suits me
 
-![Screenshot 1](./screenshot1)
-![Screenshot 2](./screenshot2)
+![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot1.png?raw=true)
+![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot2.png?raw=true)
 
 ## Download
 
