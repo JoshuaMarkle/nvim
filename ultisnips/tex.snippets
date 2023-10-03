@@ -67,10 +67,10 @@ snippet beg "begin{} / end{}" bA
 \\end{$1}
 endsnippet
 
-snippet titledbox "titledbox" bA
-\begin{titledbox}{$1}
+snippet theorembox "theorembox" bA
+\begin{theorem}{$1}
 	$0
-\end{titledbox}
+\end{theorem}
 endsnippet
 
 priority 100
@@ -140,6 +140,10 @@ if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 else:
 	snip.rv = ''
 `$2
+endsnippet
+
+snippet $$ "Math" wA
+$$${1}$$
 endsnippet
 
 snippet dm "Math" wA
