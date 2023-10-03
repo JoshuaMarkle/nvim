@@ -57,4 +57,7 @@ return {
       require("nvterm").setup()
     end,
   },
+
+  -- Code runner
+  { "CRAG666/code_runner.nvim", config = true },
 }
