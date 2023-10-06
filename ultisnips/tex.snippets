@@ -147,9 +147,7 @@ $$${1}$$
 endsnippet
 
 snippet dm "Math" wA
-\[
-${1:${VISUAL}}
-.\] $0
+\[ ${1:${VISUAL}} \] $0
 endsnippet
 
 snippet ali "Align" bA
@@ -353,6 +351,11 @@ snippet __ "subscript" iA
 _{$1}$0
 endsnippet
 
+context "math()"
+snippet prime "prime" iA
+^{\prime}
+endsnippet
+
 snippet ooo "\infty" iA
 \infty
 endsnippet
@@ -485,6 +488,11 @@ priority 300
 context "math()"
 snippet dint "integral" wA
 \int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
+
+context "math()"
+snippet limit "limit" iA
+\lim_{$1 \to $2} $0
 endsnippet
 
 priority 200
