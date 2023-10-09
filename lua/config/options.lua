@@ -10,7 +10,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+-- vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 vim.o.clipboard = 'unnamedplus'
@@ -18,6 +18,7 @@ vim.o.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.o.breakindent = true
 vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 -- Save undo history
 vim.o.undofile = true

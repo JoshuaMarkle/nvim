@@ -1,19 +1,49 @@
 return {
-  -- Change colorscheme
-  {
-    -- Built upon onedark
-    'JoshuaMarkle/playful.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
+  -- Colorscheme
+	{
+		-- 'JoshuaMarkle/playful.nvim',
+	  "JoshuaMarkle/neovim-ayu",
+		priority = 1000,
+		config = function()
+			-- vim.cmd.colorscheme 'onedark'
+			vim.cmd.colorscheme 'ayu-dark'
+		end,
+	},
 
-  -- Colorize hex codes
+	-- Beautify menu
+	{
+		'gelguy/wilder.nvim',
+		config = function()
+			local wilder = require('wilder')
+			wilder.setup({modes = {':', '/', '?'}})
+
+			wilder.set_option('renderer', wilder.popupmenu_renderer(
+				wilder.popupmenu_border_theme({
+					highlighter = wilder.basic_highlighter(),
+					highlights = {
+						default = wilder.make_hl('WilderNormal', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#B3B1AD', background = '#0A0E14'}}), -- highlight to use for the border
+						border = wilder.make_hl('WilderBorder', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#B3B1AD', background = '#0A0E14'}}), -- highlight to use for the border
+						accent = wilder.make_hl('WilderAccent', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#f4468f', background = '#0A0E14'}}),
+					},
+
+					-- Enable icons and disable scroll bar
+					left = {' ', wilder.popupmenu_devicons()},
+  				right = {' '},
+
+					-- 'single', 'double', 'rounded' or 'solid'
+					border = 'rounded',
+					pumblend = 50,
+				})
+			))
+
+		end,
+	},
+
+	-- Colorize hex codes
   {
     'norcalli/nvim-colorizer.lua',
     config = function()
-      require("colorizer")
+      require("colorizer").setup()
     end
   },
 

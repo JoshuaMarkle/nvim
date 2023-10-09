@@ -1,63 +1,71 @@
 return {
-  -- Tmux integration
-  "christoomey/vim-tmux-navigator",
+	-- Tmux integration
+	"christoomey/vim-tmux-navigator",
 
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+	-- Auto pair () [] {}
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		opts = {}
+	},
 
-  -- Auto pair () [] {}
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {}
-  },
+	-- Visualize tabs
+	{ 
+		"lukas-reineke/indent-blankline.nvim", 
+		main = "ibl", 
+		config = function()
+			require("ibl").setup {
+				scope = { enabled = true },
+			}
+		end
+	},
 
-  -- Useful plugin to show you pending keybinds.
-  { 
-    'folke/which-key.nvim', 
-    enabled = true,
-    opts = {} 
-  },
+	-- Useful plugin to show you pending keybinds.
+	{ 
+		'folke/which-key.nvim', 
+		enabled = true,
+		opts = {} 
+	},
 
-  {
-    'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = true,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
+	{
+		'nvim-lualine/lualine.nvim',
+		opts = {
+			options = {
+				icons_enabled = true,
+				-- theme = 'ayu-dark',
+				component_separators = '|',
+				section_separators = '',
+			},
+		},
+	},
 
-  -- "gc" to comment visual regions/lines
-  --{ 'numToStr/Comment.nvim', opts = {} },
+	-- "gc" to comment visual regions/lines
+	--{ 'numToStr/Comment.nvim', opts = {} },
 
-  -- File explorer
-  {
-    'nvim-tree/nvim-tree.lua',
-    config = function()
-      require("nvim-tree")
-    end
-  },
+	-- File explorer
+	{
+		'nvim-tree/nvim-tree.lua',
+		config = function()
+			require("nvim-tree")
+		end
+	},
 
-  -- Add a dashboard on open
-  {
-    'goolord/alpha-nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.theta'.config)
-    end
-  },
+	-- Add a dashboard on open
+	{
+		'goolord/alpha-nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = function ()
+			require'alpha'.setup(require'alpha.themes.theta'.config)
+		end
+	},
 
-  {
-    "NvChad/nvterm",
-    config = function ()
-      require("nvterm").setup()
-    end,
-  },
+	{
+		"NvChad/nvterm",
+		config = function ()
+			require("nvterm").setup()
+		end,
+	},
 
-  -- Code runner
-  { "CRAG666/code_runner.nvim", config = true },
+	-- Code runner
+	{ "CRAG666/code_runner.nvim", config = true },
 }
