@@ -42,14 +42,6 @@ return {
 	-- "gc" to comment visual regions/lines
 	--{ 'numToStr/Comment.nvim', opts = {} },
 
-	-- File explorer
-	{
-		'nvim-tree/nvim-tree.lua',
-		config = function()
-			require("nvim-tree")
-		end
-	},
-
 	-- Add a dashboard on open
 	{
 		'goolord/alpha-nvim',
@@ -59,13 +51,9 @@ return {
 		end
 	},
 
-	{
-		"NvChad/nvterm",
-		config = function ()
-			require("nvterm").setup()
-		end,
-	},
-
 	-- Code runner
-	{ "CRAG666/code_runner.nvim", config = true },
+	{ 
+		"CRAG666/code_runner.nvim", 
+		config = true 
+	},
 }

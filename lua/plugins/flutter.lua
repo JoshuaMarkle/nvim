@@ -1,8 +1,10 @@
+local enablePlugins = false
+
 return {
   -- Flutter support
   {
     "akinsho/flutter-tools.nvim",
-    lazy = false,
+		enabled = enablePlugins,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
@@ -13,6 +15,13 @@ return {
   },
  
   -- Flutter LSP
-  "natebosch/vim-lsc",
-  "natebosch/vim-lsc-dart",
+  {
+		"natebosch/vim-lsc",
+		enabled = enablePlugins,
+	},
+
+  {
+		"natebosch/vim-lsc-dart",
+		enabled = enablePlugins,
+	},
 }

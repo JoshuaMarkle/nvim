@@ -1,9 +1,20 @@
+local enablePlugins = false
+
 return {
-  "tpope/vim-fugitive",
-  "tpope/vim-rhubarb",
+	{
+		"tpope/vim-fugitive",
+		enabled = enablePlugins,
+	},
+
+  {
+		"tpope/vim-rhubarb",
+		enabled = enablePlugins,
+	},
+
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
+		enabled = enablePlugins,
     opts = {
       -- See `:help gitsigns.txt`
       signs = {
