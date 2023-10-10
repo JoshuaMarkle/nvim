@@ -1,6 +1,9 @@
 return {
 	-- Tmux integration
-	"christoomey/vim-tmux-navigator",
+	{
+		"christoomey/vim-tmux-navigator",
+		event = "VeryLazy",
+	},
 
 	-- Auto pair () [] {}
 	{
@@ -32,7 +35,7 @@ return {
 		opts = {
 			options = {
 				icons_enabled = true,
-				-- theme = 'ayu-dark',
+				theme = "ayu_dark",
 				component_separators = '|',
 				section_separators = '',
 			},
@@ -56,4 +59,38 @@ return {
 		"CRAG666/code_runner.nvim", 
 		config = true 
 	},
+
+	-- Firefox nvim stuff
+	{
+    'glacambre/firenvim',
+    lazy = not vim.g.started_by_firenvim,
+    build = function()
+        vim.fn["firenvim#install"](0)
+    end
+	},
+
+	  -- Notification
+  {
+    "rcarriga/nvim-notify",
+    event = "VeryLazy",
+    config = function()
+      --dofile(vim.g.base46_cache .. "notify")
+      require("notify").setup {
+        level = 2,
+        minimum_width = 50,
+        render = "default",
+        stages = "fade",
+        timeout = 3000,
+        top_down = true,
+      }
+
+      vim.notify = require "notify"
+    end,
+  },
+
+	{
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+  },
+
 }

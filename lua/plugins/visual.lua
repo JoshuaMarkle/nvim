@@ -1,12 +1,10 @@
 return {
   -- Colorscheme
 	{
-		-- 'JoshuaMarkle/playful.nvim',
 	  "JoshuaMarkle/neovim-ayu",
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme 'onedark'
-			vim.cmd.colorscheme 'ayu-dark'
+			vim.cmd.colorscheme 'ayu'
 		end,
 	},
 

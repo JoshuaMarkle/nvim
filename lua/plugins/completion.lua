@@ -4,7 +4,8 @@ return {
   -- Autocompletion
   "hrsh7th/nvim-cmp",
   enabled = enablePlugins,
-  dependencies = {
+	event = { "InsertEnter", "CmdlineEnter" },
+	dependencies = {
     -- Snippet engine & its associated nvim-cmp source
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
