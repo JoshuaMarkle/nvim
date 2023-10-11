@@ -9,7 +9,11 @@ return {
 	{
 		'windwp/nvim-autopairs',
 		event = "InsertEnter",
-		opts = {}
+		config = function()
+			require('nvim-autopairs').setup({
+				disable_filetype = { "tex" },
+			})
+		end
 	},
 
 	-- Visualize tabs
