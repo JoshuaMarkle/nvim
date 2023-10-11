@@ -2,7 +2,7 @@ return {
   -- Enable latex support
   {
     'lervag/vimtex',
-    ft = {"tex"},
+		-- ft = {"tex"},
 		config = function ()
       vim.g.vimtex_view_method = 'zathura'
       vim.g.vimtex_view_general_viewer = 'zathura'
@@ -13,7 +13,7 @@ return {
   -- Add necessary latex snippets
   {
     'sirver/ultisnips',
-    ft = {"tex"},
+    -- ft = {"tex"},
     config = function ()
       vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
       vim.g['UltiSnipsSnippetDirectories'] = {'~/.config/nvim/ultisnips'}
