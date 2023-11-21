@@ -39,7 +39,7 @@ return {
 		opts = {
 			options = {
 				icons_enabled = true,
-				theme = "ayu_dark",
+				theme = "onedark",
 				component_separators = '|',
 				section_separators = '',
 			},
@@ -96,4 +96,16 @@ return {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
   },
+
+	-- Navigation
+	{
+			"nvim-neo-tree/neo-tree.nvim",
+			branch = "v3.x",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+				"MunifTanjim/nui.nvim",
+				-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+			}
+	}
 }
