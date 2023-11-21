@@ -64,16 +64,7 @@ return {
 		config = true 
 	},
 
-	-- Firefox nvim stuff
-	{
-    'glacambre/firenvim',
-    lazy = not vim.g.started_by_firenvim,
-    build = function()
-        vim.fn["firenvim#install"](0)
-    end
-	},
-
-	  -- Notification
+  -- Notification
   {
     "rcarriga/nvim-notify",
     event = "VeryLazy",

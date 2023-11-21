@@ -53,9 +53,9 @@ return {
 				wilder.popupmenu_border_theme({
 					highlighter = wilder.basic_highlighter(),
 					highlights = {
-						default = wilder.make_hl('WilderNormal', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#B3B1AD', background = '#0A0E14'}}), -- highlight to use for the border
-						border = wilder.make_hl('WilderBorder', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#B3B1AD', background = '#0A0E14'}}), -- highlight to use for the border
-						accent = wilder.make_hl('WilderAccent', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#f4468f', background = '#0A0E14'}}),
+						default = wilder.make_hl('WilderNormal', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#a0a8b7', background = '#1f2329'}}), -- highlight to use for the border
+						border = wilder.make_hl('WilderBorder', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#a0a8b7', background = '#1f2329'}}), -- highlight to use for the border
+						accent = wilder.make_hl('WilderAccent', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#4fa6ed', background = '#1f2329'}}),
 					},
 
 					-- Enable icons and disable scroll bar
