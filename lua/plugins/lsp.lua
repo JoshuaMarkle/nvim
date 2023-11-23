@@ -1,7 +1,7 @@
 return {
   -- LSP configuration & plugins
   'neovim/nvim-lspconfig',
-  enabled = false,
+  enabled = true,
   dependencies = {
      -- Cool status updates for LSP
     { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
@@ -49,19 +49,18 @@ return {
     end, '[W]orkspace [L]ist Folders')
     
     -- Create a command `:Format` local to the LSP buffer
-    vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-      vim.lsp.buf.format()
-    end, { desc = 'Format current buffer with LSP' })
+    -- vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+      -- vim.lsp.buf.format()
+    -- end, { desc = 'Format current buffer with LSP' })
 
     -- Enable the following language servers
     local servers = {
-      -- clangd = {},
+      clangd = {},
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
       -- tsserver = {},
-      -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
+      html = { filetypes = { 'html', 'twig', 'hbs'} },
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
@@ -71,6 +70,7 @@ return {
     }
 
     -- Setup mason stuff
+		require('mason').setup()
     local mason_lspconfig = require('mason-lspconfig')
 
     mason_lspconfig.setup {

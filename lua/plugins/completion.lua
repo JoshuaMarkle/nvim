@@ -1,4 +1,4 @@
-local enablePlugins = false
+local enablePlugins = true
 
 return {
   -- Autocompletion
