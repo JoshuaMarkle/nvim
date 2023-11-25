@@ -9,8 +9,8 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Enable mouse mode
--- vim.o.mouse = 'a'
+-- Set scrolloff for nice scrolling
+vim.o.scrolloff = 6
 
 -- Sync clipboard between OS and Neovim.
 vim.o.clipboard = 'unnamedplus'
