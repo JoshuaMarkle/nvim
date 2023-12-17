@@ -55,7 +55,7 @@ return {
 
     -- Enable the following language servers
     local servers = {
-      clangd = {},
+      -- clangd = {},
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
