@@ -1,7 +1,7 @@
 return {
   -- LSP configuration & plugins
   'neovim/nvim-lspconfig',
-  enabled = true,
+  enabled = false,
   dependencies = {
      -- Cool status updates for LSP
     { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },

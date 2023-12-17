@@ -1,9 +1,8 @@
-local enablePlugins = true
+-- Autocompletion
 
 return {
-  -- Autocompletion
   "hrsh7th/nvim-cmp",
-  enabled = enablePlugins,
+  enabled = false,
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
     -- Snippet engine & its associated nvim-cmp source
