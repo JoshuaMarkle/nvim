@@ -1,11 +1,9 @@
 return {
   -- LSP configuration & plugins
   'neovim/nvim-lspconfig',
-  enabled = false,
+	event = "BufReadPre",
+	lazy = true,
   dependencies = {
-     -- Cool status updates for LSP
-    { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
-
     -- Additional lua configuration
     {
       'folke/neodev.nvim',

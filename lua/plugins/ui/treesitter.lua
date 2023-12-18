@@ -1,13 +1,13 @@
 -- Highlight, edit, and navigate code
 
 return {
-    'nvim-treesitter/nvim-treesitter',
-    event="BufRead",
-		dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    build = ':TSUpdate',
-    config = function()
+	'nvim-treesitter/nvim-treesitter',
+	event = 'BufRead',
+	dependencies = {
+		'nvim-treesitter/nvim-treesitter-textobjects',
+	},
+	build = ':TSUpdate',
+	config = function()
 		require('nvim-treesitter.configs').setup {
 			-- Add languages to be installed here that you want installed for treesitter
 			ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim' },
@@ -77,5 +77,5 @@ return {
 		vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 		vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 		vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-    end
+	end,
 }

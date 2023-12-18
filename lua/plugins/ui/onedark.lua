@@ -1,8 +1,10 @@
 return {
 	'navarasu/onedark.nvim',
+	event = 'VeryLazy',
+	lazy = false,
 	priority = 1000,
 	config = function()
-		require('onedark').setup  {
+		require('onedark').setup {
 			-- Main options --
 			style = 'darker',
 			transparent = false,
@@ -11,11 +13,11 @@ return {
 			cmp_itemkind_reverse = false,
 
 			code_style = {
-					comments = 'italic',
-					keywords = 'none',
-					functions = 'none',
-					strings = 'none',
-					variables = 'none'
+				comments = 'italic',
+				keywords = 'none',
+				functions = 'none',
+				strings = 'none',
+				variables = 'none',
 			},
 
 			-- Lualine options --
