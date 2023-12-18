@@ -54,7 +54,7 @@ require('lazy').setup({
 				'matchit',
 				'matchparen',
 				'tohtml',
-				'tutor',
+				-- 'tutor',
 				'rplugin',
 				'synmenu',
 				'optwin',

@@ -1,27 +1,28 @@
 return {
-  -- LSP configuration & plugins
-  'neovim/nvim-lspconfig',
+	-- LSP configuration & plugins
+	'neovim/nvim-lspconfig',
+	enabled = false,
 	event = "BufReadPre",
 	lazy = true,
-  dependencies = {
-    -- Additional lua configuration
-    {
-      'folke/neodev.nvim',
-      config = function()
-        require('neodev').setup()
-      end
-    },
-    
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim', 
-  },
-  config = function()
-    local on_attach = function(_, bufnr) end
-    local nmap = function(keys, func, desc)
-      if desc then
-        desc = 'LSP: ' .. desc
-      end
-      vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+	dependencies = {
+		-- Additional lua configuration
+		{
+		  'folke/neodev.nvim',
+		  config = function()
+			require('neodev').setup()
+		  end
+		},
+		
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim', 
+	},
+	config = function()
+		local on_attach = function(_, bufnr) end
+		local nmap = function(keys, func, desc)
+			if desc then
+				desc = 'LSP: ' .. desc
+			end
+			vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
     end
   
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
