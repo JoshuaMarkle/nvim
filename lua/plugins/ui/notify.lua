@@ -2,16 +2,23 @@
 
 return {
 	"rcarriga/nvim-notify",
-	enabled = false,
-    event = "VeryLazy",
+	keys = {
+		{
+			"<leader>mn",
+			function()
+			require("notify").dismiss({ silent = true, pending = true })
+			end,
+			desc = "Dismiss all Notifications",
+		},
+	},
+	lazy = true,
     config = function()
-		--dofile(vim.g.base46_cache .. "notify")
 		require("notify").setup {
     		level = 2,
         	minimum_width = 50,
         	render = "default",
         	stages = "fade",
-			timeout = 3000,
+			timeout = 1000,
     		top_down = true,
     	}
 
