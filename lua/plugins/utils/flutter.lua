@@ -1,10 +1,10 @@
-local enablePlugins = false
+local enableFlutter = false
 
 return {
   -- Flutter support
   {
     "akinsho/flutter-tools.nvim",
-		enabled = enablePlugins,
+		enabled = enableFlutter,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
@@ -17,11 +17,11 @@ return {
   -- Flutter LSP
   {
 		"natebosch/vim-lsc",
-		enabled = enablePlugins,
+		enabled = enableFlutter,
 	},
 
   {
 		"natebosch/vim-lsc-dart",
-		enabled = enablePlugins,
+		enabled = enableFlutter,
 	},
 }
