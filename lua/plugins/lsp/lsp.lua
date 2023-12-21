@@ -2,9 +2,9 @@
 
 return {
 	'neovim/nvim-lspconfig',
-	enabled = false,
-	event = 'BufReadPre',
+	enabled = true,
 	lazy = true,
+	event = 'BufReadPre',
 	dependencies = {
 		-- Additional lua configuration
 		{
@@ -47,17 +47,12 @@ return {
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 		end, '[W]orkspace [L]ist Folders')
 
-		-- Create a command `:Format` local to the LSP buffer
-		-- vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-		-- vim.lsp.buf.format()
-		-- end, { desc = 'Format current buffer with LSP' })
-
 		-- Enable the following language servers
 		local servers = {
-			-- clangd = {},
-			-- gopls = {},
-			-- pyright = {},
+			clangd = {},
+			pyright = {},
 			-- rust_analyzer = {},
+			-- gopls = {},
 			-- tsserver = {},
 			html = { filetypes = { 'html', 'twig', 'hbs' } },
 			lua_ls = {

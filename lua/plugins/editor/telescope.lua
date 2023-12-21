@@ -2,16 +2,21 @@ return {
 	'nvim-telescope/telescope.nvim',
 	cmd = "Telescope",
 	lazy = true,
+    keys = {
+		-- Files
+    	{ "<leader>f", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+		{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files({ cwd = '~' })<CR>", desc = "Find Everything" },
+    	{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
+    	{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
+    	{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+		-- Git
+		{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
+		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	{ "<leader>fd", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },
+    },
 	dependencies = {
 		{ 'nvim-lua/plenary.nvim' },
 		{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
 	},
-    keys = {
-    	{ "ff", "<cmd>Telescope find_files<CR>", desc = "Find Files Fuzzily" },
-    	{ "fg", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
-    	{ "fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
-    	{ "fd", "<cmd>Telescope diagnostics<CR>", desc = "Workspace Diagnostics [Telescope]" },
-    },
 	config = function ()
 		require('telescope').setup {
 			defaults = {
