@@ -79,9 +79,6 @@ return {
 			autocd = false
 		}
 
-		--- @param start number
-		--- @param cwd string? optional
-		--- @param items_number number? optional number of items to generate, default = 10
 		local function mru(start, cwd, items_number, opts)
 			opts = opts or mru_opts
 			items_number = if_nil(items_number, 10)
@@ -201,11 +198,11 @@ return {
 				{ type = "padding", val = 2 },
 				header,
 				{ type = "padding", val = 2 },
+				footer,
+				{ type = "padding", val = 2 },
 				section,
 				{ type = "padding", val = 2 },
 				buttons,
-				{ type = "padding", val = 2 },
-				footer,
 			},
 			opts = {
 				margin = 5,
