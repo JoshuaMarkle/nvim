@@ -6,6 +6,22 @@
 ![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot2.png?raw=true)
 ![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot3.png?raw=true)
 
+## Features
+
+- Cool theme stuff:
+    - Tokyonight theme: Perfect for some midnight coding! Easily changed in `theme.lua`
+    - Highly customized dashboard: Added a nice startup time; check out the config
+    - Better UI with `noice.nvim`
+- Markdown support:
+    - Nice highlights; markdown zen mode for note taking
+    - Viewable equations with `nable.nvim`
+    - Edit code in popup window and output results all from within the `.md` file
+- LaTeX support: The **best** LaTeX snippets; huge thanks to [Gilles Castel](https://castel.dev/)
+- Flutter support: Lets go Flutter!
+- Unabstracted plugins: Every plugin has their own `.lua` file; easy to find
+- Works will with tmux
+- Made with love :heart:
+
 ## Installation
 
 Make sure to back up `~/.config/nvim`
@@ -61,3 +77,7 @@ The folder structure is like this:
 All of the plugins are grouped into their repective folders. If you don't want any `Flutter` or `LaTeX` pluigns, then simply delete their directories and remove them from the `setup.lua` file.
 
 To add new pluigns, you can put them in an already existing `.lua` file or make a new file that returns that plugin.
+
+## Stats
+
+I built this entire config from scratch so its pretty minimal meaning that everything is very snappy. I typically have **50ms** load times on my cruddy 10yo laptop :smile:. Huge thanks to the lazy package manager. Awesome work!
