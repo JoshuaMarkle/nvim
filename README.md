@@ -4,6 +4,7 @@
 
 ![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot1.png?raw=true)
 ![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot2.png?raw=true)
+![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot3.png?raw=true)
 
 ## Installation
 
