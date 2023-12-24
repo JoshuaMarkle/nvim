@@ -18,6 +18,7 @@ require('lazy').setup({
 	{ import = 'plugins.lsp' },
 	{ import = 'plugins.git' },
 	{ import = 'plugins.utils' },
+	{ import = 'plugins.notes' },
 }, {
 	defaults = {
 		lazy = true,

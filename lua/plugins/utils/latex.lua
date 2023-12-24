@@ -5,6 +5,7 @@ return {
 	{
 		'lervag/vimtex',
 		enabled = enableLatex,
+		lazy = true,
 		ft = {"tex"},
 		config = function ()
 			vim.g.vimtex_view_method = 'zathura'
@@ -17,6 +18,7 @@ return {
 	{
 		'sirver/ultisnips',
 		enabled = enableLatex,
+		lazy = true,
 		ft = {"tex"},
 		config = function ()
 			vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
@@ -26,4 +28,21 @@ return {
 			vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 		end
 	},
+
+	-- Realtime equation viewer
+	{
+		'jbyuki/nabla.nvim',
+		enabled = enableLatex,
+		lazy = true,
+		ft = { "tex", "markdown" },
+		keys = {
+			{ "<leader>p", "<cmd>lua require('nabla').popup({ border='rounded' })<cr>", desc = "Preview Equation" },
+		},
+		config = function()
+			require("nabla").enable_virt({
+				autogen = true,
+				silent = true,
+			})
+		end,
+	}
 }

@@ -5,4 +5,8 @@ return {
 	lazy = true,
 	cmd = "RunCode",
 	config = true,
+	keys = {
+		{ "<leader>r", "<CMD>RunCode<CR>", desc = "RunCode" },
+		{ "<leader>rc", "<CMD>RunCode close<CR>", desc = "RunCode Close" },
+	}
 }

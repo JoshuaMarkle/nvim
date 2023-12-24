@@ -20,8 +20,9 @@ vim.o.breakindent = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
--- Don't wrap text
-vim.wo.wrap = false
+-- Wrap text
+vim.wo.wrap = true
+vim.wo.linebreak = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -42,3 +43,12 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Auto zen-mode in markdown files
+vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
+	pattern = '*.md',
+	callback = function()
+		vim.cmd('ZenMode')
+	end
+})
+

@@ -5,7 +5,6 @@ return {
     keys = {
 		-- Files
     	{ "<leader>f", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-		{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files({ cwd = '~' })<CR>", desc = "Find Everything" },
     	{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
     	{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
     	{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },

@@ -1,13 +1,4 @@
 return {
-	-- Very useless but a good stress buster
-	{
-		"eandrju/cellular-automaton.nvim",
-		lazy = true,
-		keys = {
-			{ "<leader>mc", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "Make It Rain" },
-		},
-	},
-
 	-- Illuminating equivalent words under the cursor
 	{
 		"RRethy/vim-illuminate",
@@ -26,4 +17,11 @@ return {
 			illuminate.configure(opts)
 		end,
 	},
+
+	-- Vim games
+	{
+		'ThePrimeagen/vim-be-good',
+		lazy = true,
+		cmd = "VimBeGood",
+	}
 }

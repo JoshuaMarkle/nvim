@@ -175,7 +175,7 @@ return {
 				{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
 				{ type = "padding", val = 1 },
 				dashboard.button("e", "  New file", "<cmd>ene<CR>"),
-				dashboard.button("ff", "󰈞  Find file"),
+				dashboard.button("f", "󰈞  Find file", "<cmd>Telescope find_files<CR>"),
 				dashboard.button("c", "  Configuration", "<cmd>cd ~/.config/nvim/<CR>"),
 				dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<cr>"),
 				dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
@@ -195,13 +195,13 @@ return {
 
 		local config = {
 			layout = {
-				{ type = "padding", val = 2 },
+				{ type = "padding", val = 1 },
 				header,
 				{ type = "padding", val = 2 },
 				footer,
-				{ type = "padding", val = 2 },
+				{ type = "padding", val = 1 },
 				section,
-				{ type = "padding", val = 2 },
+				{ type = "padding", val = 1 },
 				buttons,
 			},
 			opts = {
