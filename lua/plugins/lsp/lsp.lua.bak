@@ -13,11 +13,6 @@ return {
 				require('neodev').setup()
 			end,
 		},
-		{
-			'ray-x/lsp_signature.nvim',
-			lazy = true,
-			event = 'LspAttach',
-		},
 		'williamboman/mason-lspconfig.nvim',
 	},
 	config = function()
@@ -50,34 +45,6 @@ return {
 		nmap('<leader>wl', function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 		end, '[W]orkspace [L]ist Folders')
-
-		-- Diagnostics
-		local signs = {
-			Error = '',
-			Warn = '',
-			Hint = '',
-			Info = '',
-		}
-		for type, icon in pairs(signs) do
-			local hl = 'DiagnosticSign' .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-		end
-		vim.diagnostic.config {
-			virtual_text = false,
-			virtual_lines = true,
-			float = {
-				show_header = true,
-				enabled = false,
-				header = { '  Diagnostics' },
-				source = 'always',
-				border = 'rounded',
-				focusable = false,
-			},
-			update_in_insert = true,
-			signs = true,
-			underline = true,
-			severity_sort = false,
-		}
 
 		-- Enable the following language servers
 		local servers = {
