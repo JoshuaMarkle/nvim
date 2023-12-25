@@ -1,38 +1,38 @@
 return {
 	-- Essential markdown features
 	{
-		"tadmccorkle/markdown.nvim",
+		'tadmccorkle/markdown.nvim',
 		lazy = true,
-		ft = { "markdown" },
+		ft = { 'markdown' },
 		opts = {
 			mappings = {
-				inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
-				inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
-				inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
-				inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
-				link_add = "gl", -- (string|boolean) add link
-				link_follow = "gx", -- (string|boolean) follow link
-				go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
-				go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
-				go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
-				go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+				inline_surround_toggle = 'gs', -- (string|boolean) toggle inline style
+				inline_surround_toggle_line = 'gss', -- (string|boolean) line-wise toggle inline style
+				inline_surround_delete = 'ds', -- (string|boolean) delete emphasis surrounding cursor
+				inline_surround_change = 'cs', -- (string|boolean) change emphasis surrounding cursor
+				link_add = 'gl', -- (string|boolean) add link
+				link_follow = 'gx', -- (string|boolean) follow link
+				go_curr_heading = ']c', -- (string|boolean) set cursor to current section heading
+				go_parent_heading = ']p', -- (string|boolean) set cursor to parent section heading
+				go_next_heading = ']]', -- (string|boolean) set cursor to next section heading
+				go_prev_heading = '[[', -- (string|boolean) set cursor to previous section heading
 			},
 			inline_surround = {
 				emphasis = {
-					key = "i",
-					txt = "*",
+					key = 'i',
+					txt = '*',
 				},
 				strong = {
-					key = "b",
-					txt = "**",
+					key = 'b',
+					txt = '**',
 				},
 				strikethrough = {
-					key = "s",
-					txt = "~~",
+					key = 's',
+					txt = '~~',
 				},
 				code = {
-					key = "c",
-					txt = "`",
+					key = 'c',
+					txt = '`',
 				},
 			},
 			link = {
@@ -42,14 +42,14 @@ return {
 			},
 			toc = {
 				-- Comment text to flag headings/sections for omission in table of contents.
-				omit_heading = "toc omit heading",
-				omit_section = "toc omit section",
+				omit_heading = 'toc omit heading',
+				omit_section = 'toc omit section',
 			},
 			-- Hook functions allow for overriding or extending default behavior.
 			hooks = {
 				follow_link = 'dest', -- nil
 			},
-		}
+		},
 	},
 
 	-- Toggle markdown checkboxes
@@ -59,43 +59,43 @@ return {
 		lazy = true,
 		ft = { 'markdown' },
 		config = function()
-			vim.keymap.set('n', '<leader>mt', require('markdown-togglecheck').toggle, { desc = 'Markdown Toggle Checkbox' });
+			vim.keymap.set('n', '<leader>mt', require('markdown-togglecheck').toggle, { desc = 'Markdown Toggle Checkbox' })
 		end,
 	},
 
 	-- Evalutate markdown code blocks
 	{
-		"jubnzv/mdeval.nvim",
+		'jubnzv/mdeval.nvim',
 		lazy = true,
-		ft = { "markdown" },
+		ft = { 'markdown' },
 		keys = {
-			{ "<leader>mr", "<cmd>MdEval<CR>", desc = "Markdown Run Code" },
+			{ '<leader>mr', '<cmd>MdEval<CR>', desc = 'Markdown Run Code' },
 		},
 		opts = {
 			require_confirmation = false,
 			eval_options = {
 				cpp = {
-					command = { "g++", "-o0" },
+					command = { 'g++', '-o0' },
 					default_header = [[
 					#include <iostream>
 					#include <vector>
 					using namespace std;
-					]]
+					]],
 				},
 			},
-		}
+		},
 	},
 
 	-- Markdown code bluck editeor 2
 	{
 		'AckslD/nvim-FeMaco.lua',
 		lazy = true,
-		ft = { "markdown" },
+		ft = { 'markdown' },
 		keys = {
-			{ "<leader>mc", "<cmd>FeMaco<cr>", desc = "Markdown Edit Code"},
+			{ '<leader>mc', '<cmd>FeMaco<cr>', desc = 'Markdown Edit Code' },
 		},
 		config = function()
-			require('femaco').setup({
+			require('femaco').setup {
 				-- should prepare a new buffer and return the winid
 				prepare_buffer = function(opts)
 					local buf = vim.api.nvim_create_buf(false, false)
@@ -142,10 +142,27 @@ return {
 				ensure_newline = function(base_filetype)
 					return false
 				end,
-				normalize_indent = function (base_filetype)
+				normalize_indent = function(base_filetype)
 					return false
-				end
-			})
+				end,
+			}
 		end,
-	}
+	},
+
+	-- Realtime equation viewer
+	{
+		'jbyuki/nabla.nvim',
+		enabled = false,
+		lazy = true,
+		ft = { 'tex', 'markdown' },
+		keys = {
+			{ '<leader>lp', "<cmd>lua require('nabla').popup({ border='rounded' })<cr>", desc = 'Preview Equation' },
+		},
+		config = function()
+			require('nabla').enable_virt {
+				autogen = true,
+				silent = true,
+			}
+		end,
+	},
 }

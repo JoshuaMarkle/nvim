@@ -1,6 +1,10 @@
 return {
 	'folke/which-key.nvim',
-	keys = {{ "<leader>" }},
+	lazy = true,
+	keys = {
+		{ '<leader>' },
+		{ '<leader>l', '<cmd>Lazy<cr>', desc = 'Lazy Menu' },
+	},
 	opts = function()
 		return {
 			plugins = {

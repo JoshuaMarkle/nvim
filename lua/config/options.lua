@@ -45,10 +45,9 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Auto zen-mode in markdown files
-vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
-	pattern = '*.md',
-	callback = function()
-		vim.cmd('ZenMode')
-	end
-})
-
+-- vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
+-- 	pattern = '*.md',
+-- 	callback = function()
+-- 		vim.cmd('ZenMode')
+-- 	end
+-- })

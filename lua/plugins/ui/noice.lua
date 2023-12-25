@@ -1,16 +1,16 @@
 return {
-	"folke/noice.nvim",
-	lazy = true,
-	event = "VeryLazy",
+	'folke/noice.nvim',
+	lazy = true, -- Saves about 30ms!
+	event = 'VeryLazy',
 	dependencies = {
-		"MunifTanjim/nui.nvim",
+		'MunifTanjim/nui.nvim',
 	},
 	opts = {
 		lsp = {
 			override = {
-				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-				["vim.lsp.util.stylize_markdown"] = true,
-				["cmp.entry.get_documentation"] = true,
+				['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+				['vim.lsp.util.stylize_markdown'] = true,
+				['cmp.entry.get_documentation'] = true,
 			},
 			signature = {
 				enabled = false,
@@ -33,26 +33,26 @@ return {
 		routes = {
 			{
 				filter = {
-					event = "notify",
+					event = 'notify',
 					min_height = 10,
 				},
-			view = "split",
+				view = 'split',
 			},
 			{
 				filter = {
-					event = "msg_show",
+					event = 'msg_show',
 					any = {
-						{ find = "%d+L, %d+B" },
-						{ find = "; after #%d+" },
-						{ find = "; before #%d+" },
+						{ find = '%d+L, %d+B' },
+						{ find = '; after #%d+' },
+						{ find = '; before #%d+' },
 					},
 				},
-			view = "mini",
-		  },
+				view = 'mini',
+			},
 		},
 		cmdline = {
 			format = {
-				cmdline = { pattern = "^:", icon = "󰞷", lang = "vim" },
+				cmdline = { pattern = '^:', icon = '󰞷', lang = 'vim' },
 			},
 		},
 		views = {
