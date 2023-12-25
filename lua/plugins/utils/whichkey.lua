@@ -24,6 +24,7 @@ return {
 				mode = { 'n', 'v' },
 				['<Leader>n'] = { name = '+Explorer' },
 				['<Leader>b'] = { name = '+Buffer' },
+				['<Leader>h'] = { name = '+Harpoon' },
 				['<Leader>c'] = { name = '+Code' },
 				['<Leader>f'] = { name = '+Find' },
 				['<Leader>F'] = { name = '+Flutter' },
