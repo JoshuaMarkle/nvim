@@ -2,7 +2,6 @@
 
 return {
 	'hrsh7th/nvim-cmp',
-	enabled = true,
 	lazy = true,
 	event = { 'InsertEnter', 'CmdlineEnter' },
 	dependencies = {

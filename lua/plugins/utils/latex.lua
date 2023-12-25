@@ -1,4 +1,4 @@
-local enableLatex = true
+local enableLatex = false
 
 return {
 	-- Enable latex support
