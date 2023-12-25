@@ -7,7 +7,7 @@ return {
 	event = 'BufRead',
 
 	keys = {
-		{ '<leader>F', '<cmd>Format<cr>', desc = 'Format Code' },
+		{ '<leader>cf', '<cmd>Format<cr>', desc = 'Format Code' },
 	},
 
 	config = function()

@@ -8,3 +8,6 @@ vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', {noremap = true})
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Lazy
+vim.api.nvim_set_keymap('n', '<leader>L', ':Lazy<CR>', { noremap = true })
