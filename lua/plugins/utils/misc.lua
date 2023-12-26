@@ -1,27 +1,26 @@
 return {
-	-- Illuminating equivalent words under the cursor
+	-- Highlight cursor line
 	{
-		"RRethy/vim-illuminate",
-		enabled = false, -- Takes 12ms!
-		event = { "BufReadPre", "BufNewFile" },
-		lazy = true,
+		'yamatsum/nvim-cursorline',
+		lazy = false,
 		opts = {
-			delay = 300,
-			large_file_cutoff = 5000,
+			cursorline = {
+				enable = true,
+				timeout = 0,
+				number = false,
+			},
+			cursorword = {
+				enable = true,
+				min_length = 3,
+				hl = { underline = true },
+			},
 		},
-		config = function(_, opts)
-			local status_ok, illuminate = pcall(require, "illuminate")
-			if not status_ok then
-			print("illuminate not found!")
-			end
-			illuminate.configure(opts)
-		end,
 	},
 
 	-- Vim games
 	{
 		'ThePrimeagen/vim-be-good',
 		lazy = true,
-		cmd = "VimBeGood",
-	}
+		cmd = 'VimBeGood',
+	},
 }
