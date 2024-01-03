@@ -9,13 +9,13 @@
 ## Features
 
 - Cool theme stuff:
-    - Tokyonight theme: Perfect for some midnight coding! Easily changed in `theme.lua`
-    - Highly customized dashboard: Added a nice startup time; check out the config
-    - Better UI with `noice.nvim`
+  - Tokyonight theme: Perfect for some midnight coding! Easily changed in `theme.lua`
+  - Highly customized dashboard: Added a nice startup time; check out the config
+  - Better UI with `noice.nvim`
 - Markdown support:
-    - Nice highlights; markdown zen mode for note taking
-    - Viewable equations with `nabla.nvim`
-    - Edit code in popup window and output results all from within the `.md` file
+  - Nice highlights; markdown zen mode for note taking
+  - Viewable equations with `nabla.nvim`
+  - Edit code in popup window and output results all from within the `.md` file
 - LaTeX support: The **best** LaTeX snippets; huge thanks to [Gilles Castel](https://castel.dev/)
 - Flutter support: Lets go Flutter!
 - Unabstracted plugins: Every plugin has their own `.lua` file; easy to find
@@ -27,6 +27,7 @@
 Make sure to back up `~/.config/nvim`
 
 **Clear Any Previous Configs**
+
 ```
 # Linux / Macos (unix)
 rm -rf ~/.config/nvim
@@ -40,6 +41,7 @@ rd -r ~\AppData\Local\nvim-data
 ```
 
 **Clone This Repository**
+
 ```
 # Linux / Macos (unix)
 git clone https://github.com/JoshuaMarkle/nvim-config ~/.config/nvim
@@ -80,4 +82,4 @@ To add new pluigns, you can put them in an already existing `.lua` file or make 
 
 ## Stats
 
-I built this entire config from scratch so its pretty minimal meaning that everything is very snappy. I typically have **60ms** load times on my cruddy 10yo laptop :smile:. Huge thanks to the lazy package manager. Awesome work!
+I built this entire config from scratch so its pretty minimal meaning that everything is very snappy. I typically have **60ms** load times on my cruddy 10yo laptop :smile:. Huge thanks to the lazy package manager. Awesome work! On a more modern machine, I've seen load times around **30ms** :file:
