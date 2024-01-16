@@ -45,10 +45,10 @@ return {
 		mason_lspconfig.setup {
 			ensure_installed = {
 				'tsserver',
-				'html',
+				-- 'html',
 				'cssls',
 				'lua_ls',
-				'pyright',
+				-- 'pyright',
 				'marksman',
 			},
 			automatic_installation = true,
