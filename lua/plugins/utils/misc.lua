@@ -2,6 +2,7 @@ return {
 	-- Highlight cursor line
 	{
 		'yamatsum/nvim-cursorline',
+		enabled = false,
 		lazy = false,
 		opts = {
 			cursorline = {
