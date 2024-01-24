@@ -5,10 +5,12 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			-- theme = 'onedark',
-			theme = "tokyonight",
-			component_separators = '|',
-			section_separators = '',
+			theme = 'tokyonight',
+			-- component_separators = '|',
+			-- section_separators = '',
+			section_separators = { left = '', right = '' },
+			component_separators = { left = '', right = '' },
 		},
+		color = { fg = 204 },
 	},
 }

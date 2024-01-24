@@ -2,12 +2,7 @@
 
 return {
 	{
-		'vlelo/arduino-helper.nvim',
+		'stevearc/vim-arduino',
 		lazy = false,
-		setup = function()
-			require('arduino-helper').setup {
-				ui = 'telescope',
-			}
-		end,
 	},
 }

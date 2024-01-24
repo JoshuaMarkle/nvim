@@ -3,7 +3,7 @@ return {
 	lazy = true,
 	keys = {
 		{ '<leader>' },
-		{ '<leader>l', '<cmd>Lazy<cr>', desc = 'Lazy Menu' },
+		-- { '<leader>l', '<cmd>Lazy<cr>', desc = 'Lazy Menu' },
 	},
 	opts = function()
 		return {
@@ -30,13 +30,12 @@ return {
 				['<Leader>b'] = { name = '+Buffer' },
 				['<Leader>c'] = { name = '+Code' },
 				['<Leader>f'] = { name = '+Find' },
-				['<Leader>F'] = { name = '+Flutter' },
 				['<Leader>g'] = { name = '+Git' },
-				['<Leader>l'] = { name = '+Lazy' },
-				['<Leader>L'] = { name = '+LaTeX' },
+				['<Leader>l'] = { name = '+LSP' },
 				['<Leader>m'] = { name = '+Markdown' },
-				['<Leader>r'] = { name = '+Run' },
 				['<Leader>R'] = { name = '+R Markdown' },
+				['<Leader>L'] = { name = '+LaTeX' },
+				['<Leader>F'] = { name = '+Flutter' },
 			},
 		}
 	end,
