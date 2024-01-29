@@ -82,4 +82,4 @@ To add new pluigns, you can put them in an already existing `.lua` file or make 
 
 ## Stats
 
-I built this entire config from scratch so its pretty minimal meaning that everything is very snappy. I typically have **60ms** load times on my cruddy 10yo laptop :smile:. Huge thanks to the lazy package manager. Awesome work! On a more modern machine, I've seen load times around **30ms** :file:
+I consistently have 30ms load times. Huge thanks to the lazy package manager by folke! Awesome work :)
