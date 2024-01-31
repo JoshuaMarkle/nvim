@@ -7,7 +7,7 @@
 ![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot3.png?raw=true)
 
 > [!IMPORTANT]
-> This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin is the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`
+> This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin in the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`
 
 ## Features
 
@@ -24,6 +24,7 @@
     - Viewable equations with `nabla.nvim`
     - Edit code in popup window and output results all from within the `.md` file
     - Run code within markdown files with a bunch of languages
+  - GitHub Copilot: AI autocompletion within nvim
   - LaTeX: Has all the **best** LaTeX snippets
   - Flutter: Lets go Flutter developers!
   - Arduino
