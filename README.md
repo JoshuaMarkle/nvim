@@ -6,7 +6,8 @@
 ![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot2.png?raw=true)
 ![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot3.png?raw=true)
 
-This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin is the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`
+> [!IMPORTANT]
+> This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin is the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`
 
 ## Features
 
@@ -29,11 +30,15 @@ This is in no way a professionally created configuration. It is a config that I 
   - Soon to be R and Rmarkdown
 - Made with love :heart:
 
+> [!NOTE]
+> I consistently have **30ms** load times thanks to optimized lazy loading.
+
 ## Installation
 
 ### Linux/Mac
 
-Make sure to back up `~/.config/nvim` if you need to
+> [!TIP]  
+> Make sure to back up `~/.config/nvim` if you need to
 
 **Clear Any Previous Configs**
 
@@ -50,9 +55,9 @@ git clone https://github.com/JoshuaMarkle/nvim-config ~/.config/nvim
 
 ### Windows
 
-This config **should** work with on Windows for the most part. There are some packages that need to be installed in order for the entire configuration to work, mainly the LSP support. I have found that installing the chocolately package manager is the best way to install the dependencies.
-
-Vim's `:checkhealth` is you best friend!
+> [!WARNING]  
+> This config **should** work with on Windows for the most part. There are some packages that need to be installed in order for the entire configuration to work, mainly the LSP support. I have found that installing the chocolately package manager is the best way to install the dependencies.
+> Vim's `:checkhealth` is you best friend!
 
 **Clear Any Previous Configs**
 
@@ -97,10 +102,6 @@ To add new pluigns, you can put them in an already existing `.lua` file or make 
 ```
 
 The easiest way to play around with this config is to take a look within the `enabled.lua` file. This contains a bunch of global variables that either enable or disable plugins throughout this config.
-
-## Stats
-
-I consistently have **30ms** load times thanks to optimized lazy loading.
 
 ## Inspiration
 
