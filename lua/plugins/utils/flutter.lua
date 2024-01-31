@@ -1,5 +1,3 @@
-local enableFlutter = true
-
 return {
 	-- Flutter support
 	{
@@ -17,11 +15,11 @@ return {
 	-- Flutter LSP
 	{
 		'natebosch/vim-lsc',
-		enabled = enableFlutter,
+		enabled = enableFlutter and enableLsp,
 	},
 
 	{
 		'natebosch/vim-lsc-dart',
-		enabled = enableFlutter,
+		enabled = enableFlutter and enableLsp,
 	},
 }

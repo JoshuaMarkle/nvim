@@ -1,5 +1,6 @@
 return {
 	'williamboman/mason.nvim',
+	enabled = enableMason,
 	event = { 'BufReadPost', 'BufNewFile' },
 	lazy = true,
 	dependencies = {

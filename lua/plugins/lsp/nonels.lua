@@ -1,10 +1,11 @@
 return {
 	'nvimtools/none-ls.nvim',
+	enabled = enableLsp,
+	lazy = true,
+	event = { 'BufReadPre', 'BufNewFile' },
 	dependencies = {
 		'jay-babu/mason-null-ls.nvim',
 	},
-	event = { 'BufReadPre', 'BufNewFile' },
-	lazy = true,
 	config = function()
 		local none_ls_status_ok, none_ls = pcall(require, 'null-ls')
 		if not none_ls_status_ok then

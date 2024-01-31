@@ -2,7 +2,7 @@
 
 return {
 	'neovim/nvim-lspconfig',
-	enabled = true,
+	enabled = enableLsp,
 	lazy = true,
 	event = 'BufReadPre',
 	dependencies = {

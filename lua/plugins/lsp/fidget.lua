@@ -1,6 +1,6 @@
 return {
 	'j-hui/fidget.nvim',
-	enabled = false,
+	enabled = enableLsp,
 	tag = 'legacy',
 	event = 'LspAttach',
 	config = function()

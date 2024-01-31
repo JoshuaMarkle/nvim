@@ -1,10 +1,10 @@
 return {
 	'lewis6991/hover.nvim',
-	lazy = true,
+	lazy = enableHover,
 	keys = {
 		{ 'K', "<cmd>lua require('hover').hover()<CR>", desc = 'Hover' },
 		{ ' k', "<cmd>lua require('hover').hover_select()<CR>", desc = 'Hover Select' },
-		{ '<MouseMove', "<cmd>lua require('hover').hover_mouse<cr>", desc = 'Hover Mouse' },
+		{ '<MouseMove>', "<cmd>lua require('hover').hover_mouse<cr>", desc = 'Hover Mouse' },
 	},
 	config = function()
 		local hover_status_ok, hover = pcall(require, 'hover')

@@ -1,27 +1,28 @@
 -- Notification system
 
 return {
-	"rcarriga/nvim-notify",
+	'rcarriga/nvim-notify',
+	enabled = enableNotifications,
+	lazy = true,
 	keys = {
 		{
-			"<leader>mn",
+			'<leader>mn',
 			function()
-			require("notify").dismiss({ silent = true, pending = true })
+				require('notify').dismiss { silent = true, pending = true }
 			end,
-			desc = "Dismiss all Notifications",
+			desc = 'Dismiss all Notifications',
 		},
 	},
-	lazy = true,
-    config = function()
-		require("notify").setup {
-    		level = 2,
-        	minimum_width = 50,
-        	render = "default",
-        	stages = "fade",
+	config = function()
+		require('notify').setup {
+			level = 2,
+			minimum_width = 50,
+			render = 'default',
+			stages = 'fade',
 			timeout = 3000,
-    		top_down = true,
-    	}
+			top_down = true,
+		}
 
-		vim.notify = require "notify"
-    end,
- }
+		vim.notify = require 'notify'
+	end,
+}

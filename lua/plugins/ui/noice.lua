@@ -1,7 +1,8 @@
 return {
 	'folke/noice.nvim',
-	lazy = true, -- Saves about 30ms!
+	lazy = true,
 	event = 'VeryLazy',
+	enabled = enableNoice,
 	dependencies = {
 		'MunifTanjim/nui.nvim',
 	},
