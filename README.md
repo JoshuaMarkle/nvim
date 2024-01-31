@@ -1,6 +1,6 @@
 <h1 align="center">Josh's Nvim Config</h1>
 
-<p align="center">A minimal config with LaTeX (and Flutter) support</p>
+<p align="center">A nvim config designed around customization and speed</p>
 
 ![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot1.png?raw=true)
 ![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot2.png?raw=true)
