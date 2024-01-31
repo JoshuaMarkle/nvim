@@ -8,34 +8,52 @@
 
 ## Features
 
-- Cool theme stuff:
+- Easily enable/disable plugins with the `enabled.lua` in the config directory
+- Unabstracted plugins: Every plugin has their own `.lua` file; easy to find
+- Works will with tmux
+- Theming and UI:
   - Tokyonight theme: Perfect for some midnight coding! Easily changed in `theme.lua`
   - Highly customized dashboard: Added a nice startup time; check out the config
   - Better UI with `noice.nvim`
-- Markdown support:
-  - Nice highlights; markdown zen mode for note taking
-  - Viewable equations with `nabla.nvim`
-  - Edit code in popup window and output results all from within the `.md` file
-- LaTeX support: The **best** LaTeX snippets; huge thanks to [Gilles Castel](https://castel.dev/)
-- Flutter support: Lets go Flutter!
-- Unabstracted plugins: Every plugin has their own `.lua` file; easy to find
-- Works will with tmux
+- Extra support for:
+  - Markdown support:
+    - Nice highlights; markdown zen mode for note taking
+    - Viewable equations with `nabla.nvim`
+    - Edit code in popup window and output results all from within the `.md` file
+  - LaTeX: Has all the **best** LaTeX snippets
+  - Flutter: Lets go Flutter developers!
+  - Arduino
+  - Soon to be R and Rmarkdown
 - Made with love :heart:
 
 ## Installation
 
-Make sure to back up `~/.config/nvim`
+### Linux/Mac
+
+Make sure to back up `~/.config/nvim` if you need to
 
 **Clear Any Previous Configs**
 
 ```
-# Linux / Macos (unix)
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
+**Clone This Repository**
+
 ```
-# Windows
+git clone https://github.com/JoshuaMarkle/nvim-config ~/.config/nvim
+```
+
+### Windows
+
+This config **should** work with on Windows for the most part. There are some packages that need to be installed in order for the entire configuration to work, mainly the LSP support. I have found that installing the chocolately package manager is the best way to install the dependencies.
+
+Vim's `:checkhealth` is you best friend!
+
+**Clear Any Previous Configs**
+
+```
 rd -r ~\AppData\Local\nvim
 rd -r ~\AppData\Local\nvim-data
 ```
@@ -43,12 +61,6 @@ rd -r ~\AppData\Local\nvim-data
 **Clone This Repository**
 
 ```
-# Linux / Macos (unix)
-git clone https://github.com/JoshuaMarkle/nvim-config ~/.config/nvim
-```
-
-```
-# Windows
 git clone https://github.com/JoshuaMarkle/nvim-config ~\AppData\Local\nvim
 ```
 
@@ -82,4 +94,11 @@ To add new pluigns, you can put them in an already existing `.lua` file or make 
 
 ## Stats
 
-I consistently have 30ms load times. Huge thanks to the lazy package manager by folke! Awesome work :)
+I consistently have **30ms** load times thanks to optimized lazy loading.
+
+## Inspiration
+
+Huge thanks to...
+
+- The lazy package manager by folke. This makes loading many plugins like nothing
+- [Gilles Castel](https://castel.dev/) for a phenomenal Latex workflow
