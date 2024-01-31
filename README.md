@@ -1,15 +1,17 @@
-<h1 align="center">Nvim Config or Something</h1>
+<h1 align="center">Josh's Nvim Config</h1>
 
 <p align="center">A minimal config with LaTeX (and Flutter) support</p>
 
-![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot1.png?raw=true)
-![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot2.png?raw=true)
-![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/screenshot3.png?raw=true)
+![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot1.png?raw=true)
+![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot2.png?raw=true)
+![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot3.png?raw=true)
+
+This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin is the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`
 
 ## Features
 
-- Easily enable/disable plugins with the `enabled.lua` in the config directory
 - Unabstracted plugins: Every plugin has their own `.lua` file; easy to find
+- Easily enable/disable plugins with the `enabled.lua` in the config directory
 - Works will with tmux
 - Theming and UI:
   - Tokyonight theme: Perfect for some midnight coding! Easily changed in `theme.lua`
@@ -20,6 +22,7 @@
     - Nice highlights; markdown zen mode for note taking
     - Viewable equations with `nabla.nvim`
     - Edit code in popup window and output results all from within the `.md` file
+    - Run code within markdown files with a bunch of languages
   - LaTeX: Has all the **best** LaTeX snippets
   - Flutter: Lets go Flutter developers!
   - Arduino
@@ -64,15 +67,20 @@ rd -r ~\AppData\Local\nvim-data
 git clone https://github.com/JoshuaMarkle/nvim-config ~\AppData\Local\nvim
 ```
 
-## Options
+## Configuration
 
-The folder structure is like this:
+All of the plugins are grouped into their repective folders. For example, if you don't need Latex support, you can simple delete the `latex.lua` file within `utils` and even delete the `ultisnips` directory. Ultisnips is the completion tool for latex.
+
+To add new pluigns, you can put them in an already existing `.lua` file or make a new file that returns that plugin.
+
+**The Folder Structure**
 
 ```
 .
 ├── init.lua
 ├── lua
 │  ├── config
+│  │  ├── enabled.lua
 │  │  ├── mappings.lua
 │  │  └── options.lua
 │  ├── plugins
@@ -88,9 +96,7 @@ The folder structure is like this:
    └── tex.snippets
 ```
 
-All of the plugins are grouped into their repective folders. If you don't want any `Flutter` or `LaTeX` pluigns, then simply delete their directories and remove them from the `setup.lua` file.
-
-To add new pluigns, you can put them in an already existing `.lua` file or make a new file that returns that plugin.
+The easiest way to play around with this config is to take a look within the `enabled.lua` file. This contains a bunch of global variables that either enable or disable plugins throughout this config.
 
 ## Stats
 
