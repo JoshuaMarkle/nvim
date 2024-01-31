@@ -37,7 +37,7 @@
 
 ### Linux/Mac
 
-> [!TIP]  
+> [!IMPORTANT]  
 > Make sure to back up `~/.config/nvim` if you need to
 
 **Clear Any Previous Configs**
@@ -58,6 +58,9 @@ git clone https://github.com/JoshuaMarkle/nvim-config ~/.config/nvim
 > [!WARNING]  
 > This config **should** work with on Windows for the most part. There are some packages that need to be installed in order for the entire configuration to work, mainly the LSP support. I have found that installing the chocolately package manager is the best way to install the dependencies.
 > Vim's `:checkhealth` is you best friend!
+
+> [!IMPORTANT]  
+> Make sure to back up `~/.config/nvim` if you need to
 
 **Clear Any Previous Configs**
 
@@ -101,7 +104,8 @@ To add new pluigns, you can put them in an already existing `.lua` file or make 
    └── tex.snippets
 ```
 
-The easiest way to play around with this config is to take a look within the `enabled.lua` file. This contains a bunch of global variables that either enable or disable plugins throughout this config.
+> [!TIP]
+> The easiest way to play around with this config is to take a look within the `enabled.lua` file. This contains a bunch of global variables that either enable or disable plugins throughout this config.
 
 ## Inspiration
 
