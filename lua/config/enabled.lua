@@ -1,7 +1,7 @@
 -- Language Support
 enableCopilot = false
 enableLsp = true
-enableCompletions = true
+enableCompletions = false
 enableHover = true
 enableLspLines = false
 
