@@ -1,6 +1,6 @@
 return {
 	'nvimtools/none-ls.nvim',
-	enabled = enableLsp,
+	enabled = enableLsp and enableFormatter,
 	lazy = true,
 	event = { 'BufReadPre', 'BufNewFile' },
 	dependencies = {

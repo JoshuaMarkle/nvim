@@ -3,7 +3,8 @@ enableCopilot = false
 enableLsp = true
 enableCompletions = false
 enableHover = true
-enableLspLines = false
+enableLspLines = true
+enableFormatter = false
 
 -- UI
 enableNotifications = true
