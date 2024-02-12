@@ -1,14 +1,14 @@
 return {
-	'folke/which-key.nvim',
+	"folke/which-key.nvim",
 	lazy = true,
 	keys = {
-		{ '<leader>' },
-		-- { '<leader>l', '<cmd>Lazy<cr>', desc = 'Lazy Menu' },
+		{ "<leader>" },
+		-- { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy Menu" },
 	},
 	opts = function()
 		return {
 			plugins = {
-				marks = true, -- shows a list of your marks on ' and `
+				marks = true, -- shows a list of your marks on " and `
 				registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 				spelling = {
 					enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
@@ -25,22 +25,23 @@ return {
 				},
 			},
 			defaults = {
-				mode = { 'n', 'v' },
-				['<Leader>n'] = { name = '+Explorer' },
-				['<Leader>b'] = { name = '+Buffer' },
-				['<Leader>c'] = { name = '+Code' },
-				['<Leader>f'] = { name = '+Find' },
-				['<Leader>g'] = { name = '+Git' },
-				['<Leader>l'] = { name = '+LSP' },
-				['<Leader>m'] = { name = '+Markdown' },
-				['<Leader>R'] = { name = '+R Markdown' },
-				['<Leader>L'] = { name = '+LaTeX' },
-				['<Leader>F'] = { name = '+Flutter' },
+				mode = { "n", "v" },
+				["<Leader>n"] = { name = "+Explorer" },
+				["<Leader>b"] = { name = "+Buffer" },
+				["<Leader>c"] = { name = "+Code" },
+				["<Leader>u"] = { name = "+Find" },
+				["<Leader>h"] = { name = "+Harpoon" },
+				["<Leader>g"] = { name = "+Git" },
+				["<Leader>l"] = { name = "+LSP" },
+				["<Leader>m"] = { name = "+Markdown" },
+				["<Leader>R"] = { name = "+R Markdown" },
+				["<Leader>L"] = { name = "+LaTeX" },
+				["<Leader>F"] = { name = "+Flutter" },
 			},
 		}
 	end,
 	config = function(_, opts)
-		local wk = require 'which-key'
+		local wk = require "which-key"
 		wk.setup(opts)
 		wk.register(opts.defaults)
 	end,

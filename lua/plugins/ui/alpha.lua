@@ -5,7 +5,7 @@ return {
     enabled = true,
     lazy = false,
 	keys = {
-		{ "<leader>a", "<cmd>Alpha<CR>", desc = "Alpha" },
+		{ "<leader>A", "<cmd>Alpha<CR>", desc = "Alpha" },
 	},
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()

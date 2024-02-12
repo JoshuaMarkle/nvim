@@ -4,10 +4,10 @@ return {
 	lazy = true,
     keys = {
 		-- Files
-    	{ "<leader>f", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-    	{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
-    	{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
-    	{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+    	{ "<leader>u", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+    	{ "<leader>uo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
+    	{ "<leader>ug", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
+    	{ "<leader>ub", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
 		-- Git
 		{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
 		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	{ "<leader>fd", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },

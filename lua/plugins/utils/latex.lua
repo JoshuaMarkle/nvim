@@ -5,7 +5,7 @@ return {
 	{
 		'lervag/vimtex',
 		enabled = enableLatex,
-		lazy = true,
+		lazy = false,
 		ft = { 'tex' },
 		config = function()
 			vim.g.vimtex_view_method = 'zathura'
@@ -18,7 +18,7 @@ return {
 	{
 		'sirver/ultisnips',
 		enabled = enableLatex,
-		lazy = true,
+		lazy = false,
 		ft = { 'tex' },
 		config = function()
 			vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
