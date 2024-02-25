@@ -2,7 +2,7 @@ return {
 	-- Highlight cursor line
 	{
 		'yamatsum/nvim-cursorline',
-		enabled = true,
+		enabled = false,
 		lazy = false,
 		opts = {
 			cursorline = {
@@ -24,4 +24,11 @@ return {
 		lazy = true,
 		cmd = 'VimBeGood',
 	},
+
+	-- Confirm Exit
+	-- {
+	--   "yutkat/confirm-quit.nvim",
+	--   event = "CmdlineEnter",
+	--   opts = {},
+	-- }
 }

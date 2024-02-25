@@ -2,11 +2,11 @@
 
 return {
     'goolord/alpha-nvim',
-    enabled = false,
+    enabled = true,
     lazy = false,
-	keys = {
-		{ "<leader>a", "<cmd>Alpha<CR>", desc = "Alpha" },
-	},
+	-- keys = {
+	-- 	{ "<leader>a", "<cmd>Alpha<CR>", desc = "Alpha" },
+	-- },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local alpha = require('alpha')
@@ -141,7 +141,7 @@ return {
 			},
 			opts = {
 				position = "center",
-				hl = "Type",
+				hl = "Function",
 				-- wrap = "overflow";
 			},
 		}
@@ -153,7 +153,7 @@ return {
 					type = "text",
 					val = "Recent files",
 					opts = {
-						hl = "SpecialComment",
+						hl = "Function",
 						shrink_margin = false,
 						position = "center",
 					},
@@ -172,7 +172,7 @@ return {
 		local buttons = {
 			type = "group",
 			val = {
-				{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+				{ type = "text", val = "Quick links", opts = { hl = "Function", position = "center" } },
 				{ type = "padding", val = 1 },
 				dashboard.button("e", "  New file", "<cmd>ene<CR>"),
 				dashboard.button("f", "󰈞  Find file", "<cmd>Telescope find_files<CR>"),
@@ -189,7 +189,7 @@ return {
             val = "",
             opts = {
                 position = "center",
-                hl = "Type"
+                hl = "Comment"
             }
         }
 
@@ -197,12 +197,12 @@ return {
 			layout = {
 				{ type = "padding", val = 1 },
 				header,
-				{ type = "padding", val = 2 },
-				footer,
-				{ type = "padding", val = 1 },
+				{ type = "padding", val = 4 },
 				section,
 				{ type = "padding", val = 1 },
 				buttons,
+				{ type = "padding", val = 2 },
+				footer,
 			},
 			opts = {
 				margin = 5,
@@ -228,7 +228,7 @@ return {
             callback = function()
                 local stats = require("lazy").stats()
                 local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-                local startup_message = "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
+                local startup_message = "⚡ Neovim loaded in " .. ms .. "ms"
 
                 -- Update the footer section with the startup message
                 footer.val = startup_message
