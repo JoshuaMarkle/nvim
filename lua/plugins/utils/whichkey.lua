@@ -34,7 +34,7 @@ return {
 				["<Leader>g"] = { name = "+Git" },
 				["<Leader>l"] = { name = "+LSP" },
 				["<Leader>m"] = { name = "+Markdown" },
-				["<Leader>R"] = { name = "+R Markdown" },
+				["<Leader>r"] = { name = "+Rstudio" },
 				["<Leader>L"] = { name = "+LaTeX" },
 				["<Leader>F"] = { name = "+Flutter" },
 			},

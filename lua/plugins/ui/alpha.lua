@@ -2,10 +2,10 @@
 
 return {
     'goolord/alpha-nvim',
-    enabled = true,
+    enabled = false,
     lazy = false,
 	keys = {
-		{ "<leader>A", "<cmd>Alpha<CR>", desc = "Alpha" },
+		{ "<leader>a", "<cmd>Alpha<CR>", desc = "Alpha" },
 	},
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()

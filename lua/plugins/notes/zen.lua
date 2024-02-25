@@ -2,6 +2,7 @@ return {
 	-- Zen Mode
 	{
 		"folke/zen-mode.nvim",
+		enabled = false,
 		lazy = true,
 		cmd = "ZenMode",
 		keys = {

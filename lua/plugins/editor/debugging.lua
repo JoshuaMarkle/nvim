@@ -4,6 +4,7 @@ return {
 	-- GitHub tests
 	{
 		"nvim-neotest/neotest",
+		enabled = false,
 		lazy = true,
 		ft = {
 			"python",
