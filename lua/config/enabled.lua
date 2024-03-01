@@ -1,18 +1,17 @@
 -- Language Support
 enableCopilot = false
 enableLsp = true
-enableCompletions = false
+enableCompletions = true
 enableHover = true
 enableLspLines = true
-enableFormatter = false
+enableFormatter = true
 
 -- UI
 enableNotifications = true
 enableNoice = true
-enableWilder = false
 
 -- Misc
-enableTmux = false
+enableTmux = true
 enableLatex = true
 enableFlutter = false
 enableArduino = false
