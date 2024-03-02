@@ -2,7 +2,6 @@
 vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
-
 -- Enter, Backspace, and Ctrl-Backspace is awesome
 vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', { noremap = true })
 
@@ -13,10 +12,5 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Lazy
 vim.api.nvim_set_keymap('n', '<leader>L', ':Lazy<CR>', { noremap = true })
 
--- Open the terminal
-vim.keymap.set("n", "<leader>tm", [[:term <cr>]])
-
-
 -- select full file
-vim.keymap.set("n", "<C-a>", [[gg<S-v>G]])
-
+vim.keymap.set('n', '<C-a>', [[gg<S-v>G]])
