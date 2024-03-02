@@ -9,6 +9,7 @@ enableFormatter = true
 -- UI
 enableNotifications = true
 enableNoice = true
+enableTabline = false
 
 -- Misc
 enableTmux = true
