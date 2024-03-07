@@ -1,8 +1,8 @@
 return {
-	"folke/which-key.nvim",
+	'folke/which-key.nvim',
 	lazy = true,
 	keys = {
-		{ "<leader>" },
+		{ '<leader>' },
 		-- { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy Menu" },
 	},
 	opts = function()
@@ -20,28 +20,26 @@ return {
 					text_objects = true, -- help for text objects triggered after entering an operator
 					windows = true, -- default bindings on <c-w>
 					nav = true, -- misc bindings to work with windows
-					z = true, -- bindings for folds, spelling and others prefixed with z
-					g = true, -- bindings for prefixed with g
+					z = false, -- bindings for folds, spelling and others prefixed with z
+					g = false, -- bindings for prefixed with g
 				},
 			},
 			defaults = {
-				mode = { "n", "v" },
-				["<Leader>n"] = { name = "+Explorer" },
-				["<Leader>b"] = { name = "+Buffer" },
-				["<Leader>c"] = { name = "+Code" },
-				["<Leader>u"] = { name = "+Find" },
-				["<Leader>h"] = { name = "+Harpoon" },
-				["<Leader>g"] = { name = "+Git" },
-				["<Leader>l"] = { name = "+LSP" },
-				["<Leader>m"] = { name = "+Markdown" },
-				["<Leader>r"] = { name = "+Rstudio" },
-				["<Leader>L"] = { name = "+LaTeX" },
-				["<Leader>F"] = { name = "+Flutter" },
+				mode = { 'n', 'v' },
+				['<Leader>c'] = { name = '+Code' },
+				['<Leader>u'] = { name = '+Find' },
+				['<Leader>h'] = { name = '+Harpoon' },
+				['<Leader>g'] = { name = '+Git' },
+				['<Leader>l'] = { name = '+LSP' },
+				['<Leader>m'] = { name = '+Markdown' },
+				['<Leader>r'] = { name = '+Rstudio' },
+				['<Leader>L'] = { name = '+LaTeX' },
+				['<Leader>F'] = { name = '+Flutter' },
 			},
 		}
 	end,
 	config = function(_, opts)
-		local wk = require "which-key"
+		local wk = require 'which-key'
 		wk.setup(opts)
 		wk.register(opts.defaults)
 	end,

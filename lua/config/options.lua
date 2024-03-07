@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.o.hlsearch = false -- Set highlight on search
+vim.o.incsearch = true
 vim.o.autowrite = true -- Enable auto writes
 vim.o.cursorline = true
 vim.wo.number = true -- Make line numbers

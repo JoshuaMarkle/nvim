@@ -12,7 +12,7 @@ enableNoice = true
 enableTabline = false
 
 -- Misc
-enableTmux = true
+enableTmux = false
 enableLatex = true
 enableFlutter = false
 enableArduino = false
