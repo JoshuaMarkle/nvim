@@ -4,7 +4,7 @@ enableLsp = true
 enableCompletions = true
 enableHover = true
 enableLspLines = true
-enableFormatter = true
+enableFormatter = false
 
 -- UI
 enableNotifications = true

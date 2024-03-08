@@ -6,8 +6,14 @@ return {
 	cmd = 'RunCode',
 	config = true,
 	keys = {
-		vim.keymap.set('n', '<leader>cr', function()
-			vim.cmd('TermExec cmd="' .. require('code_runner.commands').get_filetype_command():gsub('"', '\\"') .. '"')
+		vim.keymap.set({ 'n', 't' }, '<leader>cr', function()
+			local terminals = require("toggleterm.terminal").get_all()
+			local code_runner_command = require('code_runner.commands').get_filetype_command():gsub('"', '\\"')
+			if #terminals == 0 then
+				-- Will focus on terminal so we need to save the code_runner command
+				vim.cmd("ToggleTerm size=60 direction=vertical name=toggleterm")
+			end
+			vim.cmd('TermExec cmd="' .. code_runner_command .. '"')
 		end, { desc = 'Execute File' }),
 	},
 	opts = {
