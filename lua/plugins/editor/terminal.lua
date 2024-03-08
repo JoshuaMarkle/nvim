@@ -26,7 +26,15 @@ return {
 				firstTerm:open()
 			end
 			vim.cmd("startinsert")
-		end, { desc = 'Focus Terminal' })
+		end, { desc = 'Focus Terminal' }),
+		vim.keymap.set({ 'n', 't' }, '<leader>tc', function()
+			local terminals = require("toggleterm.terminal").get_all()
+			if #terminals == 0 then
+				vim.cmd("ToggleTerm size=60 direction=vertical name=toggleterm")
+			end
+			vim.cmd('TermExec cmd=""')
+			vim.cmd('TermExec cmd="clear"')
+			end, { desc = 'Clear Terminal' })
 	},
 	config = function()
 		require('toggleterm').setup()
