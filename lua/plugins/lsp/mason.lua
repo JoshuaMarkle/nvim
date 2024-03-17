@@ -43,27 +43,29 @@ return {
 				},
 			},
 		}
+
 		mason_lspconfig.setup {
 			ensure_installed = {
 				'tsserver',
-				-- 'html',
+				'html',
 				'cssls',
 				'lua_ls',
-				-- 'pyright',
+				'pyright',
 				'marksman',
 			},
 			automatic_installation = true,
 		}
-		-- mason_null_ls.setup {
-		-- 	ensure_installed = {
-		-- 		'prettierd',
-		-- 		'stylua',
-		-- 		'black',
-		-- 		'isort',
-		-- 		'ruff',
-		-- 		'eslint_d',
-		-- 		'luacheck',
-		-- 	},
-		-- }
+
+		mason_null_ls.setup {
+			ensure_installed = {
+				'prettierd',
+				'stylua',
+				'black',
+				'isort',
+				'ruff',
+				'eslint_d',
+				'luacheck',
+			},
+		}
 	end,
 }
