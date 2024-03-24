@@ -2,7 +2,7 @@ return {
 	'gerazov/toggle-bool.nvim',
 	lazy = true,
 	keys = {
-		{ '<leader>ct', "<cmd>lua require('toggle-bool').toggle_bool()<cr>", desc = 'Toggle Booleans' },
+		{ '<leader>mt', "<cmd>lua require('toggle-bool').toggle_bool()<cr>", desc = 'Toggle Boolean' },
 	},
 	opts = {
 		additional_toggles = {

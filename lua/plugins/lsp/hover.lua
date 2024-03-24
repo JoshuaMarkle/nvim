@@ -1,5 +1,6 @@
 return {
 	'lewis6991/hover.nvim',
+	enabled = false,
 	lazy = enableHover,
 	keys = {
 		{ 'K', "<cmd>lua require('hover').hover()<CR>", desc = 'Hover' },

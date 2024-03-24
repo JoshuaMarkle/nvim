@@ -35,7 +35,7 @@ return {
 					require("mini.files").open(vim.loop.cwd(), true)
 				end
 			end,
-			desc = "Explore Files",
+			desc = "File Explorer",
 		},
 	},
 	config = function(_, opts)

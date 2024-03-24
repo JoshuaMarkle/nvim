@@ -20,5 +20,10 @@ return {
 			lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 		}
 		vim.cmd 'colorscheme tokyonight'
+
+		-- Make NormalFloat and FloatBorder background transparent
+		vim.cmd [[highlight NormalFloat guibg=NONE]]
+		vim.cmd [[highlight FloatBorder guibg=NONE]]
+		vim.cmd [[highlight FloatTitle guibg=NONE]]
 	end,
 }

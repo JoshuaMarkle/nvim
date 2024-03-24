@@ -3,7 +3,9 @@ return {
 	lazy = true,
 	keys = {
 		{ '<leader>' },
-		-- { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy Menu" },
+		vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { desc = 'Save' }),
+		vim.keymap.set('n', '<leader>W', '<CMD>SudaWrite<CR>', { desc = 'Save as sudo' }),
+		vim.keymap.set('n', '<leader>q', '<CMD>confirm q<CR>', { desc = 'Quit' }),
 	},
 	opts = function()
 		return {
@@ -24,17 +26,20 @@ return {
 					g = false, -- bindings for prefixed with g
 				},
 			},
+			icons = { group = "", separator = "" },
+			disable = { filetypes = { "TelescopePrompt" } },
 			defaults = {
 				mode = { 'n', 'v' },
-				['<Leader>c'] = { name = '+Code' },
-				['<Leader>u'] = { name = '+Find' },
-				['<Leader>h'] = { name = '+Harpoon' },
-				['<Leader>g'] = { name = '+Git' },
-				['<Leader>l'] = { name = '+LSP' },
-				['<Leader>m'] = { name = '+Markdown' },
-				['<Leader>r'] = { name = '+Rstudio' },
-				['<Leader>L'] = { name = '+LaTeX' },
-				['<Leader>F'] = { name = '+Flutter' },
+				['<Leader>u'] = { name = '󰍉 Find' },
+				['<Leader>h'] = { name = '󰦨 Harpoon' },
+				['<Leader>g'] = { name = '󰊢 Git' },
+				['<Leader>l'] = { name = ' LSP' },
+				['<Leader>t'] = { name = ' Terminal' },
+				['<Leader>w'] = { name = '󰓩 Window' },
+				['<Leader>m'] = { name = ' Markdown' },
+				['<Leader>r'] = { name = ' Rstudio' },
+				['<Leader>L'] = { name = '󱗆 LaTeX' },
+				['<Leader>F'] = { name = '󰀲 Flutter' },
 			},
 		}
 	end,

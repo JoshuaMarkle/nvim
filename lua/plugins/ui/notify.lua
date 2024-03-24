@@ -10,15 +10,18 @@ return {
 			function()
 				require('notify').dismiss { silent = true, pending = true }
 			end,
-			desc = 'Dismiss all Notifications',
+			desc = 'Dismiss All Notifications',
 		},
 	},
 	config = function()
 		require('notify').setup {
 			level = 2,
 			minimum_width = 50,
-			render = 'default',
-			stages = 'fade',
+			max_width = 200,
+			max_height = 10,
+			fps = 60,
+			render = 'compact',
+			stages = 'slide',
 			timeout = 3000,
 			top_down = true,
 		}
