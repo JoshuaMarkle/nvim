@@ -22,7 +22,7 @@ return {
 			fps = 60,
 			render = 'compact',
 			stages = 'slide',
-			timeout = 3000,
+			timeout = 6000,
 			top_down = true,
 		}
 

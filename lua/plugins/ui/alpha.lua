@@ -4,9 +4,9 @@ return {
     'goolord/alpha-nvim',
     enabled = true,
     lazy = false,
-	-- keys = {
-	-- 	{ "<leader>a", "<cmd>Alpha<CR>", desc = "Alpha" },
-	-- },
+	keys = {
+		{ "<leader>a", "<cmd>Alpha<CR>", desc = "Home" },
+	},
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local alpha = require('alpha')

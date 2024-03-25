@@ -3,10 +3,6 @@ return {
 	lazy = true,
 	keys = {
 		{ '<leader>' },
-		vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { desc = 'Save' }),
-		vim.keymap.set('n', '<leader>W', '<CMD>SudaWrite<CR>', { desc = 'Save as sudo' }),
-		vim.keymap.set('n', '<leader>q', '<CMD>confirm q<CR>', { desc = 'Quit' }),
-		vim.keymap.set('n', '<leader>n', '<CMD>ene<CR>', { desc = 'New File' }),
 	},
 	opts = function()
 		return {

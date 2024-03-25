@@ -1,19 +1,34 @@
 -- Highlight, edit, and navigate code
 
 return {
-	"nvim-treesitter/nvim-treesitter",
-	event = "BufRead",
+	'nvim-treesitter/nvim-treesitter',
+	event = 'BufRead',
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
+		'nvim-treesitter/nvim-treesitter-textobjects',
 	},
-	build = ":TSUpdate",
+	build = ':TSUpdate',
 	config = function()
-		require("nvim-treesitter.configs").setup {
+		require('nvim-treesitter.configs').setup {
 			-- Specify languages to be installed
 			auto_install = false,
-			ensure_installed = { 
-				"c", "cpp", "python", "lua", "rust", "go", "html", "css", "javascript", 
-				"typescript", "vimdoc", "vim", "bash", "dart", "json" 
+			ensure_installed = {
+				'c',
+				'cpp',
+				'python',
+				'lua',
+				'rust',
+				'go',
+				'html',
+				'css',
+				'javascript',
+				'typescript',
+				'vimdoc',
+				'vim',
+				'bash',
+				'dart',
+				'json',
+				'markdown',
+				'latex',
 			},
 
 			highlight = { enable = true },

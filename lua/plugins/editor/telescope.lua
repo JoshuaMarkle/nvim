@@ -10,7 +10,10 @@ return {
     	{ "<leader>ub", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
 		-- Git
 		{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
-		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	{ "<leader>fd", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },
+		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	
+
+		-- LSP
+		{ "<leader>ld", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },
     },
 	dependencies = {
 		{ 'nvim-lua/plenary.nvim' },

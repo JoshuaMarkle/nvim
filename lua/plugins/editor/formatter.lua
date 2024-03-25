@@ -8,10 +8,18 @@ return {
 	config = function()
 		require('conform').setup {
 			formatters_by_ft = {
+				c = { 'clang_format' },
+				cpp = { 'clang_format' },
 				lua = { 'stylua' },
-				go = { 'goimports', 'gofmt' },
-				javascript = { { 'prettierd', 'prettier' } },
 				python = { 'isort', 'black' },
+				javascript = { 'prettier' },
+				typescript = { 'prettier' },
+				css = { 'prettier' },
+				html = { 'prettier' },
+				json = { 'prettier' },
+				yaml = { 'prettier' },
+				markdown = { 'prettier' },
+				go = { 'goimports', 'gofmt' },
 				['*'] = { 'codespell' },
 				['_'] = { 'trim_whitespace' },
 			},

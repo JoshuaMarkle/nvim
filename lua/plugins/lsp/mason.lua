@@ -5,6 +5,7 @@ return {
 	lazy = true,
 	dependencies = {
 		{ 'williamboman/mason-lspconfig.nvim', cmd = { 'LspInstall', 'LspUninstall' } },
+		'WhoIsSethDaniel/mason-tool-installer.nvim',
 	},
 	opts = {
 		ensure_installed = {
@@ -29,10 +30,8 @@ return {
 		if not mason_lspconfig_status_ok then
 			print 'mason-lspconfig not found!'
 		end
-		local mason_null_ls_status_ok, mason_null_ls = pcall(require, 'mason-null-ls')
-		if not mason_null_ls_status_ok then
-			print 'mason-null-ls not found!'
-		end
+
+		local mason_tool_installer = require 'mason-tool-installer'
 
 		mason.setup {
 			ui = {
@@ -44,6 +43,7 @@ return {
 			},
 		}
 
+		-- Language Processing Servers (LSPs)
 		mason_lspconfig.setup {
 			ensure_installed = {
 				'tsserver',
@@ -56,15 +56,15 @@ return {
 			automatic_installation = true,
 		}
 
-		mason_null_ls.setup {
+		-- Formatting
+		mason_tool_installer.setup {
 			ensure_installed = {
-				'prettierd',
+				'prettier',
 				'stylua',
-				'black',
 				'isort',
-				'ruff',
+				'black',
+				'pylint',
 				'eslint_d',
-				'luacheck',
 			},
 		}
 	end,

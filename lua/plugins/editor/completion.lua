@@ -11,6 +11,8 @@ return {
 		-- Nice snippets
 		'saadparwaiz1/cmp_luasnip',
 		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-calc',
 		'rafamadriz/friendly-snippets',
 
 		-- Adds LSP completion capabilities
@@ -33,12 +35,11 @@ return {
 			require('luasnip.loaders.from_vscode').lazy_load()
 			luasnip.config.setup {}
 
-			-- Custom highlighs
+			-- Custom highlights
 			vim.api.nvim_set_hl(0, 'CmpItemKindSnippet', { bg = 'NONE', fg = '#ff7a93' })
 			vim.api.nvim_set_hl(0, 'CmpItemKindText', { bg = 'NONE', fg = '#1abc9c' })
 			vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { link = 'Directory' })
 			vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'CmpIntemAbbrMatch' })
-			vim.api.nvim_set_hl(0, 'CmpItemSelected', { bg = '#0000FF' })
 
 			local icons = {
 				Text = '',
@@ -128,6 +129,7 @@ return {
 					{ name = 'luasnip' },
 					{ name = 'buffer' },
 					{ name = 'paths' },
+					{ name = 'calc' },
 				},
 				window = {
 					completion = {

@@ -156,7 +156,7 @@ return {
 		lazy = true,
 		ft = { 'tex', 'markdown' },
 		keys = {
-			{ '<leader>lp', "<cmd>lua require('nabla').popup({ border='rounded' })<cr>", desc = 'Preview Equation' },
+			{ '<leader>me', "<cmd>lua require('nabla').popup({ border='rounded' })<cr>", desc = 'Equation Preview' },
 		},
 		config = function()
 			require('nabla').enable_virt {
@@ -168,30 +168,36 @@ return {
 
 	-- Highlight code and other things
 	{
-	  "lukas-reineke/headlines.nvim",
-	  opts = function()
-		local opts = {}
-		for _, ft in ipairs({ "markdown", "norg", "rmd", "org" }) do
-		  opts[ft] = {
-			headline_highlights = {},
-			fat_headline_upper_string = "▄",
-			fat_headline_lower_string = "▀",
-		  }
-		  for i = 1, 6 do
-			local hl = "Headline" .. i
-			vim.api.nvim_set_hl(0, hl, { link = "Headline", default = true })
-			table.insert(opts[ft].headline_highlights, hl)
-		  end
-		end
-		return opts
-	  end,
-	  ft = { "markdown", "norg", "rmd", "org" },
-	  config = function(_, opts)
-		-- PERF: schedule to prevent headlines slowing down opening a file
-		vim.schedule(function()
-		  require("headlines").setup(opts)
-		  require("headlines").refresh()
-		end)
-	  end,
-	}
+		'lukas-reineke/headlines.nvim',
+		ft = { 'markdown', 'rmd' },
+		config = function()
+			-- PERF: schedule to prevent headlines slowing down opening a file
+			vim.schedule(function()
+				require('headlines').setup {
+					markdown = {
+						query = vim.treesitter.parse_query(
+							'markdown',
+							[[
+								(fenced_code_block) @codeblock
+							]]
+						),
+						codeblock_highlight = 'CodeBlock',
+					},
+					rmd = {
+						query = vim.treesitter.parse_query(
+							'markdown',
+							[[
+								(fenced_code_block) @codeblock
+							]]
+						),
+						treesitter_language = 'markdown',
+						codeblock_highlight = 'CodeBlock',
+					},
+				}
+				require('headlines').refresh()
+			end)
+
+			require('headlines').setup {}
+		end,
+	},
 }
