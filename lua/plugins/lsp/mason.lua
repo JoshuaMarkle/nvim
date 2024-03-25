@@ -18,7 +18,6 @@ return {
 			'ruff',
 			'eslint_d',
 			'luacheck',
-			'prettierd',
 		},
 	},
 	config = function()

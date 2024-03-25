@@ -20,6 +20,16 @@ return {
 		},
 		'williamboman/mason-lspconfig.nvim',
 	},
+	keys = {
+		-- Toggle the diagnostics
+		vim.keymap.set('n', '<leader>lt', function()
+			local config = vim.diagnostic.config
+			local vt = config().virtual_text
+			config {
+				virtual_text = not vt,
+			}
+		end, { desc = "Toggle Diagnostics" })
+	},
 	config = function()
 		-- Diagnostics
 		local signs = {
@@ -47,7 +57,7 @@ return {
 			},
 			update_in_insert = true,
 			signs = true,
-			underline = true,
+			underline = false,
 			severity_sort = false,
 		}
 
@@ -75,10 +85,14 @@ return {
 			ensure_installed = vim.tbl_keys(servers),
 		}
 
+		-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
+
 		mason_lspconfig.setup_handlers {
 			function(server_name)
 				require('lspconfig')[server_name].setup {
-					capabilities = require('cmp_nvim_lsp').default_capabilities(),
+					capabilities = capabilities,
 					on_attach = function() end,
 					settings = servers[server_name],
 					filetypes = (servers[server_name] or {}).filetypes,
