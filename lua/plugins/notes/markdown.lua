@@ -175,7 +175,7 @@ return {
 			vim.schedule(function()
 				require('headlines').setup {
 					markdown = {
-						query = vim.treesitter.parse_query(
+						query = vim.treesitter.query.parse(
 							'markdown',
 							[[
 								(fenced_code_block) @codeblock
@@ -184,7 +184,7 @@ return {
 						codeblock_highlight = 'CodeBlock',
 					},
 					rmd = {
-						query = vim.treesitter.parse_query(
+						query = vim.treesitter.query.parse(
 							'markdown',
 							[[
 								(fenced_code_block) @codeblock
@@ -197,7 +197,7 @@ return {
 				require('headlines').refresh()
 			end)
 
-			require('headlines').setup {}
+			require('headlines').setup({})
 		end,
 	},
 }

@@ -85,10 +85,7 @@ return {
 			ensure_installed = vim.tbl_keys(servers),
 		}
 
-		-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
-
+		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		mason_lspconfig.setup_handlers {
 			function(server_name)
 				require('lspconfig')[server_name].setup {
