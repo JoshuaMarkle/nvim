@@ -140,6 +140,16 @@ function M.toggle()
 					end)
 				end, 400),
 			}),
+			search_tree({
+				search_query = signal.search_query,
+				replace_query = signal.replace_query,
+				data = signal.search_results,
+				origin_winid = renderer:get_origin_winid(),
+				hidden = signal.search_results:map(function(value)
+					return #value == 0
+				end),
+			}),
+			n.gap(1),
 			n.rows(
 				{
 					flex = 0,
@@ -155,17 +165,7 @@ function M.toggle()
 						right = 1,
 					},
 				})
-			),
-			n.gap(1),
-			search_tree({
-				search_query = signal.search_query,
-				replace_query = signal.replace_query,
-				data = signal.search_results,
-				origin_winid = renderer:get_origin_winid(),
-				hidden = signal.search_results:map(function(value)
-					return #value == 0
-				end),
-			})
+			)
 			-- n.gap(1),
 			-- n.columns(
 			-- 	{

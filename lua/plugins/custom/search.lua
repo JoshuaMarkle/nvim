@@ -1,9 +1,19 @@
 return {
     dir = "plugins.custom.search",
-    lazy = false,
+    lazy = true,
+	event = {
+		'BufReadPre',
+		'BufNewFile',
+	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"grapp-dev/nui-components.nvim",
+		{
+			"nvim-pack/nvim-spectre",
+			config = function()
+			  require("spectre").setup()
+			end,
+		},
 	},
 	keys = {
 		{

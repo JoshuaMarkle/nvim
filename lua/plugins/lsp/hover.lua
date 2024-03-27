@@ -1,10 +1,13 @@
 return {
 	'lewis6991/hover.nvim',
-	enabled = false,
-	lazy = enableHover,
+	lazy = true,
+	event = {
+		'BufReadPre',
+		'BufNewFile',
+	},
 	keys = {
 		{ 'K', "<cmd>lua require('hover').hover()<CR>", desc = 'Hover' },
-		{ ' k', "<cmd>lua require('hover').hover_select()<CR>", desc = 'Hover Select' },
+		{ '<leader>k', "<cmd>lua require('hover').hover_select()<CR>", desc = 'Hover Select' },
 		{ '<MouseMove>', "<cmd>lua require('hover').hover_mouse<cr>", desc = 'Hover Mouse' },
 	},
 	config = function()
