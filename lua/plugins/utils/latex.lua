@@ -1,5 +1,3 @@
-local enableLatex = true
-
 return {
 	-- Enable latex support
 	{

@@ -1,7 +1,8 @@
 return {
 	{
 		"R-nvim/R.nvim",
-		lazy = false
+		enabled = enableR,
+		lazy = false,
 	},
 
 	{

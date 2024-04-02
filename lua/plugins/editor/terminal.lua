@@ -6,6 +6,7 @@ return {
 	lazy = false,
 	keys = {
 		vim.keymap.set({ 'n', 't' }, '<leader>tm', '<CMD>ToggleTerm size=60 direction=vertical name=toggleterm<CR>', { desc = 'Open Terminal' }),
+		vim.keymap.set({ 'n', 't' }, '<leader>th', '<CMD>ToggleTerm size=15 direction=horizontal name=toggleterm<CR>', { desc = 'Horizontal Terminal' }),
 		vim.keymap.set({ 'n', 't' }, '<leader>tt', function()
 			-- Go back to previous buffer if currently in terminal
 			if vim.bo.filetype == "toggleterm" then

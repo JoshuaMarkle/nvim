@@ -36,7 +36,8 @@ return {
 				['<Leader>m'] = { name = ' Markdown' },
 				['<Leader>r'] = { name = ' Rstudio' },
 				['<Leader>L'] = { name = '󱗆 LaTeX' },
-				['<Leader>F'] = { name = '󰀲 Flutter' },
+				['<Leader>f'] = { name = '󰀲 Flutter' },
+				['<Leader>fp'] = { name = '󰏖 Pub' },
 			},
 		}
 	end,

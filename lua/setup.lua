@@ -31,6 +31,9 @@ require('lazy').setup({
 		border = 'rounded',
 	},
 	performance = {
+		cache = {
+			enabled = true,
+		},
 		rtp = {
 			disabled_plugins = {
 				'netrw',

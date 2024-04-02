@@ -1,5 +1,6 @@
 return {
 	'theprimeagen/harpoon',
+	enabled = false,
 	lazy = true,
 	event = 'VeryLazy',
 	init = function()
