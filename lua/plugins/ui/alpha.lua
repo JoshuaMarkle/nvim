@@ -243,7 +243,6 @@ return {
 
 		local config = {
 			layout = {
-				{ type = "padding", val = 1 },
 				header,
 				{ type = "padding", val = 2 },
 				section,
