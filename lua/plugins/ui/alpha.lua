@@ -243,8 +243,9 @@ return {
 
 		local config = {
 			layout = {
+				{ type = "padding", val = vim.api.nvim_win_get_height(0) < 50 and 0 or 4 },
 				header,
-				{ type = "padding", val = 2 },
+				{ type = "padding", val = vim.api.nvim_win_get_height(0) < 50 and 2 or 6 },
 				section,
 				{ type = "padding", val = 1 },
 				buttons,
