@@ -11,8 +11,8 @@ enableNoice = true
 enableTabline = false
 
 -- Misc
-enableR = false
-enableLatex = false
+enableR = true
+enableLatex = true
 enableFlutter = false
 enableArduino = false
 enableFirenvim = false
