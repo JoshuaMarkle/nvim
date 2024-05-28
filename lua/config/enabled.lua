@@ -1,8 +1,8 @@
 -- Language Support
 enableCopilot = false
 enableLsp = false
-enableCompletions = true
-enableHover = true
+enableCompletions = false
+enableHover = false
 enableFormatter = false
 
 -- UI
