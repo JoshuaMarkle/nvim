@@ -1,6 +1,7 @@
 return {
     dir = "plugins.custom.search",
     lazy = true,
+	enabled = false,
 	event = {
 		'BufReadPre',
 		'BufNewFile',

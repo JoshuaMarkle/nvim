@@ -15,4 +15,4 @@ enableR = true
 enableLatex = true
 enableFlutter = false
 enableArduino = false
-enableFirenvim = false
+enableFirenvim = true
