@@ -38,7 +38,7 @@ return {
 				group = 'firenvim',
 			})
 
-			vim.opt.guifont = 'CaskaydiaCove Nerd Font:h20'
+			vim.opt.guifont = 'CaskaydiaCove Nerd Font:h12'
 		end
     end
 }
