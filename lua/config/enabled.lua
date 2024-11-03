@@ -6,7 +6,7 @@ enableHover = false
 enableFormatter = false
 
 -- UI
-enableNotifications = true
+enableNotifications = false
 enableNoice = true
 enableTabline = false
 
