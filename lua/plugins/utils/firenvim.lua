@@ -18,7 +18,7 @@ return {
 						cmdline = 'neovim',
 						priority = 0,
 						selector = 'textarea',
-						takeover = 'never',
+						takeover = 'never'
 					},
 				},
 			}
@@ -38,7 +38,7 @@ return {
 				group = 'firenvim',
 			})
 
-			vim.opt.guifont = 'CaskaydiaCove Nerd Font:h20'
+			-- vim.opt.guifont = 'Roboto Mono:h20'
 		end
     end
 }

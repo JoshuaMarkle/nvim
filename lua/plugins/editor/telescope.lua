@@ -4,16 +4,16 @@ return {
 	lazy = true,
     keys = {
 		-- Files
-    	{ "<leader>u", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-    	{ "<leader>uo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
-    	{ "<leader>ug", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
-    	{ "<leader>ub", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+    	{ "<leader>.", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+    	-- { "<leader>uo", "<cmd>Telescope oldfiles<CR>", desc = "Find Files" },
+    	-- { "<leader>ug", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
+    	-- { "<leader>ub", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
 		-- Git
-		{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
-		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	
+		-- { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
+		-- { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },	
 
 		-- LSP
-		{ "<leader>ld", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },
+		-- { "<leader>ld", "<cmd>Telescope diagnostics<CR>", desc = "Find Diagnostics" },
     },
 	dependencies = {
 		{ 'nvim-lua/plenary.nvim' },

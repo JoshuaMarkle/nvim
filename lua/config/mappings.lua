@@ -1,8 +1,8 @@
 -- Essentials
-vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { desc = 'Save' })
-vim.keymap.set('n', '<leader>W', '<CMD>SudaWrite<CR>', { desc = 'Save As Sudo' })
+-- vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { desc = 'Save' })
+-- vim.keymap.set('n', '<leader>W', '<CMD>SudaWrite<CR>', { desc = 'Save As Sudo' })
 vim.keymap.set('n', '<leader>q', '<CMD>confirm q<CR>', { desc = 'Quit' })
-vim.keymap.set('n', '<leader>n', '<CMD>ene<CR>', { desc = 'New File' })
+-- vim.keymap.set('n', '<leader>n', '<CMD>ene<CR>', { desc = 'New File' })
 
 -- Remap <C-d> and <C-u> to center screen
 vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
