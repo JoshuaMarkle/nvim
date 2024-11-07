@@ -7,15 +7,25 @@ return {
 	config = true,
 	keys = {
 		-- Run code; opens a new terminal if needed
-		vim.keymap.set({ 'n' }, '<leader>tr', function()
-			local terminals = require("toggleterm.terminal").get_all()
-			local code_runner_command = require('code_runner.commands').get_filetype_command():gsub('"', '\\"')
-			if #terminals == 0 then
-				vim.cmd("ToggleTerm size=60 direction=vertical name=toggleterm")
+		-- vim.keymap.set({ 'n' }, '<leader>tr', function()
+		-- 	local terminals = require("toggleterm.terminal").get_all()
+		-- 	local code_runner_command = require('code_runner.commands').get_filetype_command():gsub('"', '\\"')
+		-- 	if #terminals == 0 then
+		-- 		vim.cmd("ToggleTerm size=60 direction=vertical name=toggleterm")
+		-- 	end
+		-- 	vim.cmd("update")
+		-- 	vim.cmd('TermExec cmd="' .. code_runner_command .. '"')
+		-- end, { desc = 'Run Code In Terminal' }),
+		vim.keymap.set({ 'n' }, '<leader>c', function()
+			local code_runner_command = require('code_runner.commands').get_filetype_command()
+			if not code_runner_command then
+				print("No code runner command found for this filetype")
+				return
 			end
-			vim.cmd("update")
-			vim.cmd('TermExec cmd="' .. code_runner_command .. '"')
-		end, { desc = 'Run Code In Terminal' }),
+			local escaped_command = code_runner_command:gsub("'", "'\\''")
+			local shell_cmd = "pypr show term && tmux send-keys -t codeforces '" .. "clear && " .. escaped_command .. "' Enter"
+			vim.fn.jobstart({ 'sh', '-c', shell_cmd })
+		end, { desc = 'Run Code' })
 	},
 	opts = {
 		-- choose default mode (valid term, tab, float, toggle)
