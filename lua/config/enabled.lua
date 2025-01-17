@@ -6,13 +6,13 @@ enableHover = false
 enableFormatter = false
 
 -- UI
-enableNotifications = false
+enableNotifications = true
 enableNoice = true
 enableTabline = false
 
 -- Misc
-enableR = true
+enableR = false
 enableLatex = true
 enableFlutter = false
 enableArduino = false
-enableFirenvim = true
+enableFirenvim = false

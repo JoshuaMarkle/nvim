@@ -2,6 +2,7 @@
 
 return {
 	'nvim-treesitter/nvim-treesitter',
+	enabled = not enableLatex,
 	event = 'BufRead',
 	dependencies = {
 		'nvim-treesitter/nvim-treesitter-textobjects',
