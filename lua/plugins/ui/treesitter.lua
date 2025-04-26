@@ -23,6 +23,7 @@ return {
 				'css',
 				'javascript',
 				'typescript',
+				'tsx',
 				'vimdoc',
 				'vim',
 				'bash',

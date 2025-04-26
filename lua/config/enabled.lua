@@ -1,5 +1,5 @@
 -- Language Support
-enableCopilot = false
+enableCopilot = true
 enableLsp = false
 enableCompletions = false
 enableHover = false
@@ -12,7 +12,7 @@ enableTabline = false
 
 -- Misc
 enableR = false
-enableLatex = true
+enableLatex = false
 enableFlutter = false
 enableArduino = false
 enableFirenvim = false

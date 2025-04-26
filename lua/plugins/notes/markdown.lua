@@ -2,6 +2,7 @@ return {
 	-- Essential markdown features
 	{
 		'tadmccorkle/markdown.nvim',
+		enabled = false,
 		lazy = true,
 		ft = { 'markdown' },
 		opts = {
