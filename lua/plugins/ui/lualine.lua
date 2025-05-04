@@ -4,10 +4,10 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = 'nightfly',
+			theme = 'tokyonight',
 			component_separators = '|',
-			section_separators = { left = '', right = '' },
+			section_separators = { left = '', right = ''},
+			-- section_separators = { left = '', right = '' },
 		},
-		color = { fg = 204 },
 	},
 }

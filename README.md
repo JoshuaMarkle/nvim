@@ -4,7 +4,6 @@
 
 ![Screenshot 1](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot1.png?raw=true)
 ![Screenshot 2](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot2.png?raw=true)
-![Screenshot 3](https://github.com/JoshuaMarkle/nvim-config/blob/main/docs/screenshot3.png?raw=true)
 
 > [!IMPORTANT]
 > This is in no way a professionally created configuration. It is a config that I have built from scratch and is what works for me (and hopefully you too). Everytihng is setup in such a way where nothing is hidden (unlike many other configs) and everything is highly configurable. Feel free to browse through every plugin in the `lua/plugins` directory or just enable/disable plugins quickly in `lua/config/enabled.lua`

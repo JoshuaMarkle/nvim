@@ -28,12 +28,12 @@ local ret = {
 	red = "#E34F4F",
 	red1 = "#DE2B2B",
 	teal = "#56B7C8",
-	terminal_black = "#171B24",
+	terminal_black = "#101319",
 	yellow = "#E3C94F",
 	git = {
 		add = "#5EBF5E",
-		change = "#e37e4f",
-		delete = "#DE2B2B",
+		change = "#5599e2",
+		delete = "#e34f4f",
 	},
 }
 

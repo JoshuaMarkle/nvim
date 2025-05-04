@@ -1,49 +1,46 @@
 return {
 	'folke/which-key.nvim',
 	lazy = true,
-	keys = {
-		{ '<leader>' },
+	keys = { { '<leader>' } },
+	dependencies = { 'echasnovski/mini.icons' },
+	opts = {
+		plugins = {
+			marks = true,
+			registers = true,
+			spelling = {
+				enabled = true,
+				suggestions = 25,
+			},
+			presets = {
+				operators = true,
+				motions = true,
+				text_objects = true,
+				windows = true,
+				nav = true,
+				z = false,
+				g = false,
+			},
+		},
+		icons = { group = "", separator = "" },
+		disable = { filetypes = { "TelescopePrompt" } },
 	},
-	opts = function()
-		return {
-			plugins = {
-				marks = true, -- shows a list of your marks on " and `
-				registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
-				spelling = {
-					enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-					suggestions = 25, -- how many suggestions should be shown in the list?
-				},
-				presets = {
-					operators = true, -- adds help for operators like d, y, ...
-					motions = true, -- adds help for motions
-					text_objects = true, -- help for text objects triggered after entering an operator
-					windows = true, -- default bindings on <c-w>
-					nav = true, -- misc bindings to work with windows
-					z = false, -- bindings for folds, spelling and others prefixed with z
-					g = false, -- bindings for prefixed with g
-				},
-			},
-			icons = { group = "", separator = "" },
-			disable = { filetypes = { "TelescopePrompt" } },
-			defaults = {
-				mode = { 'n', 'v' },
-				['<Leader>u'] = { name = '󰍉 Find' },
-				['<Leader>h'] = { name = '󰦨 Harpoon' },
-				['<Leader>g'] = { name = '󰊢 Git' },
-				['<Leader>l'] = { name = ' LSP' },
-				['<Leader>t'] = { name = ' Terminal' },
-				['<Leader>b'] = { name = '󰓩 Buffer' },
-				['<Leader>m'] = { name = ' Markdown' },
-				['<Leader>r'] = { name = ' Rstudio' },
-				['<Leader>L'] = { name = '󱗆 LaTeX' },
-				['<Leader>f'] = { name = '󰀲 Flutter' },
-				['<Leader>fp'] = { name = '󰏖 Pub' },
-			},
-		}
-	end,
 	config = function(_, opts)
-		local wk = require 'which-key'
+		local wk = require("which-key")
 		wk.setup(opts)
-		wk.register(opts.defaults)
+
+		-- ✅ Call `add()` to define your mappings
+		wk.add({
+			{ "<Leader>u", group = "󰍉 Find" },
+			{ "<Leader>h", group = "󰦨 Harpoon" },
+			{ "<Leader>g", group = "󰊢 Git" },
+			{ "<Leader>l", group = " LSP" },
+			{ "<Leader>t", group = " Terminal" },
+			{ "<Leader>b", group = "󰓩 Buffer" },
+			{ "<Leader>m", group = " Markdown" },
+			{ "<Leader>r", group = " Rstudio" },
+			{ "<Leader>L", group = "󱗆 LaTeX" },
+			{ "<Leader>f", group = "󰀲 Flutter" },
+			{ "<Leader>fp", group = "󰏖 Pub" },
+		}, { mode = { "n", "v" } })
 	end,
 }
