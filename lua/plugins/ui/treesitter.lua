@@ -2,13 +2,13 @@
 
 return {
 	'nvim-treesitter/nvim-treesitter',
-	enabled = not enableLatex,
 	event = 'BufRead',
 	dependencies = {
 		'nvim-treesitter/nvim-treesitter-textobjects',
 	},
 	build = ':TSUpdate',
 	config = function()
+		vim.cmd("syntax off") -- Do not use builtin highlighting
 		require('nvim-treesitter.configs').setup {
 			-- Specify languages to be installed
 			auto_install = false,
@@ -33,7 +33,10 @@ return {
 				'latex',
 			},
 
-			highlight = { enable = true },
+			highlight = { 
+				enable = true,
+				disable = { "latex" },
+			},
 			indent = { enable = true },
 			incremental_selection = {
 				enable = true,
