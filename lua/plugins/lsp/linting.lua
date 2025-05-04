@@ -1,5 +1,6 @@
 return {
 	'mfussenegger/nvim-lint',
+	enabled = enableLsp,
 	event = {
 		'BufReadPre',
 		'BufNewFile',

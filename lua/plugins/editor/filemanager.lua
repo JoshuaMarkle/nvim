@@ -11,7 +11,7 @@ return {
 	},
 	cmd = { "Neotree" },
 	keys = {
-		{ "<leader>e", "<CMD>Neotree toggle<CR>", desc = "File Explorer" },
+		{ "<leader>e", "<CMD>Neotree position=current toggle<CR>", desc = "File Explorer" },
 	},
 	config = function ()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
@@ -25,7 +25,7 @@ return {
 			{text = "󰌵", texthl = "DiagnosticSignHint"})
 
 		require("neo-tree").setup({
-			close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+			close_if_last_window = false,
 			popup_border_style = "rounded",
 			enable_git_status = true,
 			enable_diagnostics = true,
@@ -129,23 +129,23 @@ return {
 					},
 					["<2-LeftMouse>"] = "open",
 					["<cr>"] = "open",
+					["l"] = "open",
 					["<esc>"] = "cancel", -- close preview or floating neo-tree window
-					["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
 					-- Read `# Preview Mode` for more information
-					["l"] = "focus_preview",
 					["S"] = "open_split",
 					["s"] = "open_vsplit",
+					["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
 					-- ["S"] = "split_with_window_picker",
 					-- ["s"] = "vsplit_with_window_picker",
 					["t"] = "open_tabnew",
 					-- ["<cr>"] = "open_drop",
 					-- ["t"] = "open_tab_drop",
 					["w"] = "open_with_window_picker",
-					--["P"] = "toggle_preview", -- enter preview mode, which shows the current node without focusing
+					["h"] = "close_node",
 					["C"] = "close_node",
 					-- ['C'] = 'close_all_subnodes',
 					["z"] = "close_all_nodes",
-					--["Z"] = "expand_all_nodes",
+					["Z"] = "expand_all_nodes",
 					["a"] = { 
 						"add",
 						-- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
@@ -217,6 +217,7 @@ return {
 				window = {
 					mappings = {
 						["<bs>"] = "navigate_up",
+						["-"] = "navigate_up",
 						["."] = "set_root",
 						["H"] = "toggle_hidden",
 						["/"] = "fuzzy_finder",
@@ -258,6 +259,7 @@ return {
 					mappings = {
 						["bd"] = "buffer_delete",
 						["<bs>"] = "navigate_up",
+						["-"] = "navigate_up",
 						["."] = "set_root",
 						["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
 						["oc"] = { "order_by_created", nowait = false },
@@ -295,79 +297,3 @@ return {
 		vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
 	end
 }
-
-
--- return {
--- 	"echasnovski/mini.files",
--- 	enabled = true,
--- 	version = "*",
--- 	lazy = false,
---     opts = {
--- 		mappings = {
--- 			close = '<ESC>',
--- 			go_in_plus = '<CR>',
--- 		},
---
--- 		options = {
--- 			permanent_delete = true,
--- 			use_as_default_explorer = true,
--- 		},
---
--- 		windows = {
--- 			max_number = 3,
--- 			preview = true,
--- 			width_focus = 20,
--- 			width_nofocus = 20,
--- 			width_preview = 30,
--- 		},
--- 	},
--- 	keys = {
--- 		{
--- 			"<leader>e",
--- 			function()
--- 				local success = pcall(function()
--- 					return require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
--- 				end)
---
--- 				if not success then
--- 					require("mini.files").open(vim.loop.cwd(), true)
--- 				end
--- 			end,
--- 			desc = "File Explorer",
--- 		},
--- 	},
--- 	config = function(_, opts)
--- 		require("mini.files").setup(opts)
---
--- 		local show_dotfiles = true
--- 		---@diagnostic disable-next-line: unused-local
--- 		local filter_show = function(fs_entry)
--- 			return true
--- 		end
--- 		local filter_hide = function(fs_entry)
--- 			return not vim.startswith(fs_entry.name, ".")
--- 		end
---
--- 		local toggle_dotfiles = function()
--- 			show_dotfiles = not show_dotfiles
--- 			local new_filter = show_dotfiles and filter_show or filter_hide
--- 			require("mini.files").refresh({ content = { filter = new_filter } })
--- 		end
---
--- 		vim.api.nvim_create_autocmd("User", {
--- 			pattern = "MiniFilesBufferCreate",
--- 			callback = function(args)
--- 				local buf_id = args.data.buf_id
--- 				-- Tweak left-hand side of mapping to your liking
--- 				vim.keymap.set("n", "g.", toggle_dotfiles, { buffer = buf_id })
--- 			end,
--- 		})
---
--- 		vim.api.nvim_create_autocmd("User", {
--- 			pattern = "MiniFilesActionRename",
--- 			callback = function(event)
--- 				require("lazyvim.util").lsp.on_rename(event.data.from, event.data.to)
--- 			end,
--- 		})
---     end,
--- }

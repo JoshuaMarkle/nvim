@@ -1,18 +1,18 @@
 -- Language Support
-enableCopilot = false
-enableLsp = true
-enableCompletions = true
-enableHover = true
-enableFormatter = false
+_G.enableCopilot = false
+_G.enableLsp = false
+_G.enableCompletions = true
+_G.enableHover = true
+_G.enableFormatter = false
 
 -- UI
-enableNotifications = true
-enableNoice = true
-enableTabline = false
+_G.enableNotifications = true
+_G.enableNoice = true
+_G.enableTabline = false
 
 -- Misc
-enableR = false
-enableLatex = true
-enableFlutter = false
-enableArduino = false
-enableFirenvim = false
+_G.enableR = false
+_G.enableLatex = true
+_G.enableFlutter = false
+_G.enableArduino = false
+_G.enableFirenvim = false

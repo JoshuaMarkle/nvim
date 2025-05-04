@@ -1,6 +1,6 @@
 return {
 	'williamboman/mason.nvim',
-	enabled = enableMason,
+	enabled = enableLsp,
 	event = { 'BufReadPost', 'BufNewFile' },
 	lazy = true,
 	dependencies = {
