@@ -1,5 +1,5 @@
 return {
-	dir = vim.fn.stdpath("config") .. "/theme",
+	dir = vim.fn.stdpath("config") .. "/lua/custom/theme",
 	name = "tokyonight",
 	lazy = false,
 	priority = 1000,
