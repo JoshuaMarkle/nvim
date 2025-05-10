@@ -1,9 +1,5 @@
 ---@class Palette
 local ret = {
-	-- bg = "#24283b",
-	-- bg_dark = "#1f2335",
-	-- bg_dark1 = "#1b1e2d",
-	-- bg_highlight = "#292e42",
 	bg = "#101319",
 	bg_dark = "#171B24",
 	bg_dark1 = "#171B24",
@@ -11,7 +7,7 @@ local ret = {
 	comment = "#565f89",
 	dark3 = "#545c7e",
 	dark5 = "#737aa2",
-	fg = "#c0caf5",
+	fg = "#dadff2",
 	fg_dark = "#a9b1d6",
 	fg_gutter = "#3b4261",
 	blue = "#7aa2f7",
@@ -42,44 +38,5 @@ local ret = {
 	},
 	terminal_black = "#414868",
 }
-
----@class Palette
--- local ret = {
--- 	bg = "#101319",
--- 	bg_dark = "#171B24",
--- 	bg_dark1 = "#171B24",
--- 	bg_highlight = "#171B24",
--- 	blue = "#5599E2",
--- 	blue0 = "#3F8CDE",
--- 	blue1 = "#5679E3",
--- 	blue2 = "#3E66E0",
--- 	blue5 = "#5599E2",
--- 	blue6 = "#3F8CDE",
--- 	blue7 = "#3A435A",
--- 	comment = "#3A435A",
--- 	cyan = "#69bfce",
--- 	dark3 = "#3A435A",
--- 	dark5 = "#3A435A",
--- 	fg = "#F4F3EE",
--- 	fg_dark = "#DDDBCF",
--- 	fg_gutter = "#3A435A",
--- 	green = "#7CC47C",
--- 	green1 = "#5EBF5E",
--- 	green2 = "#5EBF5E",
--- 	magenta = "#956dca",
--- 	magenta2 = "#885AC4",
--- 	orange = "#e37e4f",
--- 	purple = "#956dca",
--- 	red = "#E34F4F",
--- 	red1 = "#DE2B2B",
--- 	teal = "#56B7C8",
--- 	terminal_black = "#101319",
--- 	yellow = "#E3C94F",
--- 	git = {
--- 		add = "#5EBF5E",
--- 		change = "#5599e2",
--- 		delete = "#e34f4f",
--- 	},
--- }
 
 return ret

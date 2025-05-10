@@ -1,4 +1,4 @@
---init.lua by JoshuaMarkle
+-- Config written by JoshuaMarkle
 
 -- Configuration
 require 'config.options'
