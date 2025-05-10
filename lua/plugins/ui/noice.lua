@@ -52,40 +52,45 @@ return {
 			},
 		},
 		cmdline = {
+			view = "cmdline",
 			format = {
 				cmdline = { pattern = '^:', icon = '󰞷', lang = 'vim' },
 			},
 		},
-			views = {
-				mini = {
-					win_options = {
-						winblend = 0,
-					},
+		views = {
+			mini = {
+				position = {
+					row = -1,
+					col = 0,
 				},
-				cmdline_popup = {
-					position = {
-						row = 1,
-						col = "50%",
-					},
-					size = {
-						width = 60,
-						height = "auto",
-					},
+				win_options = {
+					winblend = 0,
 				},
-				popupmenu = {
-					relative = "editor",
-					position = {
-						row = 4,
-						col = "50%",
-					},
-					size = {
-						width = 60,
-						height = 10,
-					},
-					border = {
-						style = "rounded",
-						padding = { 0, 1 },
-					},
+			},
+			cmdline_popup = {
+				position = {
+					row = 1,
+					col = "50%",
+				},
+				size = {
+					width = 60,
+					height = "auto",
+				},
+			},
+			popupmenu = {
+				relative = "editor",
+				position = {
+					row = 4,
+					col = "50%",
+				},
+				size = {
+					width = 60,
+					height = 10,
+				},
+				border = {
+					style = "rounded",
+					padding = { 0, 1 },
+				},
 				win_options = {
 					winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
 				},

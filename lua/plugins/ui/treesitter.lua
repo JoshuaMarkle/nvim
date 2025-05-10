@@ -8,28 +8,25 @@ return {
 	},
 	build = ':TSUpdate',
 	config = function()
-		vim.cmd("syntax off") -- Do not use builtin highlighting
 		require('nvim-treesitter.configs').setup {
 			-- Specify languages to be installed
-			auto_install = false,
+			auto_install = true,
 			ensure_installed = {
 				'c',
 				'cpp',
 				'python',
 				'lua',
-				'rust',
-				'go',
 				'html',
 				'css',
 				'javascript',
 				'typescript',
 				'tsx',
-				'vimdoc',
 				'vim',
+				'vimdoc',
 				'bash',
-				'dart',
 				'json',
 				'markdown',
+				'markdown_inline',
 				'latex',
 			},
 

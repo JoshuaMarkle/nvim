@@ -1,8 +1,8 @@
 -- Language Support
 _G.enableCopilot = false
 _G.enableLsp = false
-_G.enableCompletions = true
-_G.enableHover = true
+_G.enableCompletions = false
+_G.enableHover = false
 _G.enableFormatter = false
 
 -- UI
