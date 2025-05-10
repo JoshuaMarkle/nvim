@@ -7,7 +7,6 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     Foo                         = { bg = c.magenta2, fg = c.fg },
-
     Comment                     = { fg = c.comment, style = opts.styles.comments }, -- any comment
     ColorColumn                 = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal                     = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
