@@ -130,7 +130,7 @@ return {
 					{ name = 'buffer' },
 					{ name = 'paths' },
 					{ name = 'calc' },
-					{ name = "cmp_r" },
+					{ name = 'cmp_r' },
 				},
 				window = {
 					completion = {
