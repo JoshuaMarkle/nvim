@@ -44,7 +44,6 @@ return {
 				'isort',
 				'black',
 				'pylint',
-				'eslint_d',
 			},
 		}
 
@@ -54,6 +53,7 @@ return {
 				'cssls',
 				'lua_ls',
 				'pyright',
+				'eslint',
 			},
 
 			automatic_installation = true,
@@ -87,6 +87,19 @@ return {
 								},
 								telemetry = { enable = false },
 							},
+						},
+					}
+				end,
+
+				-- Override for eslint
+				['eslint'] = function()
+					require('lspconfig').eslint.setup {
+						capabilities = require('cmp_nvim_lsp').default_capabilities(),
+						on_attach = on_attach,
+						root_dir = require('lspconfig.util').root_pattern('eslint.config.js', 'eslint.config.mjs', '.git'),
+						settings = {
+							workingDirectories = { mode = 'auto' },
+							format = false, -- Prefer prettier formatting
 						},
 					}
 				end,
