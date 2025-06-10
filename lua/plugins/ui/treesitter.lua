@@ -30,9 +30,9 @@ return {
 				'latex',
 			},
 
-			highlight = { 
+			highlight = {
 				enable = true,
-				disable = { "latex" },
+				disable = { 'latex' },
 			},
 			indent = { enable = true },
 			incremental_selection = {
