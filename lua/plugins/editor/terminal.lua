@@ -1,4 +1,5 @@
 -- Toggle term has more terminal features
+return {}
 
 -- I have learned to just use TMUX
 -- return {
