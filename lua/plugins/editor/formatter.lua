@@ -16,6 +16,8 @@ return {
 				javascriptreact = { 'prettier' },
 				typescript = { 'prettier' },
 				typescriptreact = { 'prettier' },
+				java = { 'google-java-format' },
+				rust = { 'rustfmt' },
 				css = { 'prettier' },
 				html = { 'prettier' },
 				json = { 'prettier' },
@@ -36,5 +38,9 @@ return {
 			log_level = vim.log.levels.ERROR,
 			notify_on_error = true,
 		}
+
+		vim.api.nvim_create_user_command('Format', function()
+			require('conform').format { async = true, lsp_fallback = true }
+		end, {})
 	end,
 }

@@ -2,13 +2,6 @@ return {
 	'nvim-lualine/lualine.nvim',
 	lazy = false,
 	config = function()
-		local colors = {
-			bg       = '#101319',
-			fg       = '#c0caf5',
-			white    = '#ffffff',
-			grey     = '#3b4261',
-		}
-
 		local empty = require('lualine.component'):extend()
 		function empty:draw(default_highlight)
 			self.status = ''
@@ -18,32 +11,15 @@ return {
 			return self.status
 		end
 
-		local function process_sections(sections)
-			for name, section in pairs(sections) do
-				local left = name:sub(9, 10) < 'x'
-				for pos = 1, name ~= 'lualine_z' and #section or #section - 1 do
-					table.insert(section, pos * 2, { empty, color = { fg = colors.bg, bg = colors.bg } })
-				end
-				for id, comp in ipairs(section) do
-					if type(comp) ~= 'table' then
-						comp = { comp }
-						section[id] = comp
-					end
-					comp.separator = left and { right = '' } or { left = '' }
-				end
-			end
-			return sections
-		end
-
 		require('lualine').setup {
 			options = {
 				icons_enabled = true,
-				theme = 'tokyonight',
+				theme = 'onedark',
 				component_separators = '',
 				section_separators = { left = '', right = '' },
 				globalstatus = true,
 			},
-			sections = process_sections {
+			sections = {
 				lualine_a = { 'mode' },
 				lualine_b = { 'branch', 'diff', 'diagnostics' },
 				lualine_c = {
