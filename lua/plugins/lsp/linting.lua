@@ -8,6 +8,16 @@ return {
 	config = function()
 		local lint = require 'lint'
 
+		-- Args
+		lint.linters.pylint.args = {
+			'-f',
+			'json',
+			'--from-stdin',
+			'%filepath',
+			'--extension-pkg-whitelist=pygame',
+		}
+
+		-- Files
 		lint.linters_by_ft = {
 			javascript = { 'eslint_d' },
 			typescript = { 'eslint_d' },
